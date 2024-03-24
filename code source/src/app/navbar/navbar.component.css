@@ -32,3 +32,14 @@ input.inp1{
     border-radius: 0px;
     margin-left: -13px;
 }
+button{
+    width: 120px;
+    max-width: 120px;
+    min-width: 120px;
+    display: inline-block;
+}
+.input-group{
+    width: 200px;
+    max-width: 200px;
+    min-width: 200px;
+}
