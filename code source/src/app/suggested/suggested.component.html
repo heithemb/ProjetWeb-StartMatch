@@ -1,0 +1,25 @@
+<div class="row">
+    <div class="col">
+        <div class="card cus-bg" style="width: 18rem;">
+            <!-- <img src="../../assets/back.png" class="card-img" alt="...">
+            <div class="card-img-overlay"> -->
+                <div class="card-header cus-bg">
+                  <h4> suggested for you </h4>
+                  </div>
+                <ul class="list-group list-group-flush cus-bg">
+                    <li *ngFor="let profile of suggested" class="list-group-item cus-bg">
+                      <div class="row">
+                        <div class="col-3 align-items">
+                          <a href="profile"><img [src]="profile.image" height="45" width="51" id="pdp" class="rounded-circle" ></a>
+                      </div>
+                        <div class="col align-items">
+                          <a href="profile" class="text-dark btn"><p id="profile-name">{{profile.name}}</p></a>
+                      </div>
+                      </div>
+                    </li>
+                  </ul>
+                
+<!--             </div>
+ -->          </div>
+    </div>
+</div>
