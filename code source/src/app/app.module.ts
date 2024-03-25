@@ -6,9 +6,10 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
-import { ProfilComponent } from './profil/profil.component';
-import { NavbarnewsComponent } from './navbarnews/navbarnews.component';
-import { HeadernewsComponent } from './headernews/headernews.component';
+import { NewsfilterComponent } from './newsfilter/newsfilter.component';
+import { FormsModule } from '@angular/forms';
+import { NewsfeedComponent } from './newsfeed/newsfeed.component';
+import { SuggestedComponent } from './suggested/suggested.component';
 
 
 @NgModule({
@@ -17,14 +18,15 @@ import { HeadernewsComponent } from './headernews/headernews.component';
     NavbarComponent,
     FooterComponent,
     HeaderComponent,
-    ProfilComponent,
-    NavbarnewsComponent,
-    HeadernewsComponent,
+    NewsfilterComponent,
+    NewsfeedComponent,
+    SuggestedComponent,
 
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [
     provideClientHydration()
