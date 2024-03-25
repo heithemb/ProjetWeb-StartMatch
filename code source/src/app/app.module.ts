@@ -6,6 +6,9 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
+import { ProfilComponent } from './profil/profil.component';
+import { NavbarnewsComponent } from './navbarnews/navbarnews.component';
+import { HeadernewsComponent } from './headernews/headernews.component';
 
 
 @NgModule({
@@ -14,6 +17,9 @@ import { HeaderComponent } from './header/header.component';
     NavbarComponent,
     FooterComponent,
     HeaderComponent,
+    ProfilComponent,
+    NavbarnewsComponent,
+    HeadernewsComponent,
 
   ],
   imports: [
