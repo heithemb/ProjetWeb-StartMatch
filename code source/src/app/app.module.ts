@@ -10,6 +10,9 @@ import { NewsfilterComponent } from './newsfilter/newsfilter.component';
 import { FormsModule } from '@angular/forms';
 import { NewsfeedComponent } from './newsfeed/newsfeed.component';
 import { SuggestedComponent } from './suggested/suggested.component';
+import { HeadernewsComponent } from './headernews/headernews.component';
+import { NavbarnewsComponent } from './navbarnews/navbarnews.component';
+import { ProfilComponent } from './profil/profil.component';
 
 
 @NgModule({
@@ -21,6 +24,9 @@ import { SuggestedComponent } from './suggested/suggested.component';
     NewsfilterComponent,
     NewsfeedComponent,
     SuggestedComponent,
+    HeadernewsComponent,
+    NavbarnewsComponent,
+    ProfilComponent,
 
   ],
   imports: [
