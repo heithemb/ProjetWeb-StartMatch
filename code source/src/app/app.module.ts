@@ -13,6 +13,8 @@ import { SuggestedComponent } from './suggested/suggested.component';
 import { HeadernewsComponent } from './headernews/headernews.component';
 import { NavbarnewsComponent } from './navbarnews/navbarnews.component';
 import { ProfilComponent } from './profil/profil.component';
+import { SearchfilterComponent } from './searchfilter/searchfilter.component';
+import { SearchComponent } from './search/search.component';
 
 
 @NgModule({
@@ -27,6 +29,8 @@ import { ProfilComponent } from './profil/profil.component';
     HeadernewsComponent,
     NavbarnewsComponent,
     ProfilComponent,
+    SearchfilterComponent,
+    SearchComponent,
 
   ],
   imports: [
