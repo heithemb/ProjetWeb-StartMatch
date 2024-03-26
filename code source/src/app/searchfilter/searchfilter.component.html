@@ -44,6 +44,15 @@
                   />between 5 and 20
                 </div>
               </li>
+              <li>
+                <div class="dropdown-item">
+                  <input
+                    type="checkbox"
+                    class="form-check-input"
+                    value="less than 5"
+                  />less than 5
+                </div>
+              </li>
             </ul>
           </div>
   
@@ -123,7 +132,7 @@
                 <input
                   type="checkbox"
                   class="form-check-input"
-                  value="more than 20"
+                  value="post"
                 />post
               </div>
             </li>
@@ -132,14 +141,14 @@
                 <input
                   type="checkbox"
                   class="form-check-input"
-                  value="between 5 and 20"
+                  value="profile"
                 />profile
               </div>
             </li>
           </ul>
         </div>
         </div>
-        <button type="submit" class="btn btn-sm btn-outline-danger">save</button>
+        <button (click)="affich" type="submit" class="btn btn-sm btn-outline-danger" id="bt">save</button>
       </form>
     </div>
   </div>
