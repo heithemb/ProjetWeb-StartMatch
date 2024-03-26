@@ -13,6 +13,8 @@ import { SuggestedComponent } from './suggested/suggested.component';
 import { HeadernewsComponent } from './headernews/headernews.component';
 import { NavbarnewsComponent } from './navbarnews/navbarnews.component';
 import { ProfilComponent } from './profil/profil.component';
+import { FiltrageComponent } from './filtrage/filtrage.component';
+import { AffichePostComponent } from './affiche-post/affiche-post.component';
 
 
 @NgModule({
@@ -27,6 +29,8 @@ import { ProfilComponent } from './profil/profil.component';
     HeadernewsComponent,
     NavbarnewsComponent,
     ProfilComponent,
+    FiltrageComponent,
+    AffichePostComponent,
 
   ],
   imports: [
