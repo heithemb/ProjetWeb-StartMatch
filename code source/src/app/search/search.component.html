@@ -8,20 +8,17 @@
           <li class="list-group-item">
             selected status
             <br>
-            <span class="badge rounded-pill text-bg-secondary text-light">founder</span>
-            <span class="badge rounded-pill text-bg-secondary text-light">co-founder</span>
+            <span *ngFor="let item of shared.checkedsta" class="badge rounded-pill text-bg-light text-dark">{{item}}</span>
           </li>
           <li class="list-group-item">
             selected type <br> 
-            <span class="badge rounded-pill text-bg-secondary text-light">post</span>
-            <span class="badge rounded-pill text-bg-secondary text-light">profile</span>
+            <span *ngFor="let it of shared.checkedtype" class="badge rounded-pill text-bg-light text-dark">{{it}}</span>
           </li>
           <li class="list-group-item">selected experience <br>
-            <span class="badge rounded-pill text-bg-secondary text-light">less than 5</span>
+            <span *ngFor="let item of shared.checkedex" class="badge rounded-pill text-bg-light text-dark">{{item}}</span>
         </li>
           <li class="list-group-item">selected fileds <br>
-            <span class="badge rounded-pill text-bg-secondary text-light">computer science</span>
-            <span class="badge rounded-pill text-bg-secondary text-light">agriculture</span>
+            <span *ngFor="let item of shared.checkedfield" class="badge rounded-pill text-bg-light text-dark">{{item}}</span>
         </li>
         </ul>
       </div>

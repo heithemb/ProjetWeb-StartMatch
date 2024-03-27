@@ -5,3 +5,7 @@
     overflow-y: scroll;
     max-height: 200px;
 }
+.btn{
+    margin-left: 0.3rem;
+    margin-top: 0rem;
+}

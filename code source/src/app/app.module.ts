@@ -15,6 +15,7 @@ import { NavbarnewsComponent } from './navbarnews/navbarnews.component';
 import { ProfilComponent } from './profil/profil.component';
 import { SearchfilterComponent } from './searchfilter/searchfilter.component';
 import { SearchComponent } from './search/search.component';
+import { LandingpageComponent } from './landingpage/landingpage.component';
 
 
 @NgModule({
@@ -31,6 +32,7 @@ import { SearchComponent } from './search/search.component';
     ProfilComponent,
     SearchfilterComponent,
     SearchComponent,
+    LandingpageComponent,
 
   ],
   imports: [
