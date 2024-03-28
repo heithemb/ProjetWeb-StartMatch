@@ -16,6 +16,12 @@ import { ProfilComponent } from './profil/profil.component';
 import { SearchfilterComponent } from './searchfilter/searchfilter.component';
 import { SearchComponent } from './search/search.component';
 import { LandingpageComponent } from './landingpage/landingpage.component';
+import { CreatePostComponent } from './create-post/create-post.component';
+import { FormPersonComponent } from './form-person/form-person.component';
+import { FormStartupComponent } from './form-startup/form-startup.component';
+import { LoginFormComponent } from './login-form/login-form.component';
+import { ProfileSearchComponent } from './profile-search/profile-search.component';
+import { ButtonManageComponent } from './button-manage/button-manage.component';
 
 
 @NgModule({
@@ -33,6 +39,12 @@ import { LandingpageComponent } from './landingpage/landingpage.component';
     SearchfilterComponent,
     SearchComponent,
     LandingpageComponent,
+    CreatePostComponent,
+    FormPersonComponent,
+    FormStartupComponent,
+    LoginFormComponent,
+    ProfileSearchComponent,
+    ButtonManageComponent,
 
   ],
   imports: [

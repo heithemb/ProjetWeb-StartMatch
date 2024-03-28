@@ -1,0 +1,28 @@
+body {
+    background-image: url("../../assets/bg4.jpg");
+    background-repeat: no-repeat; 
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#login{ margin-bottom: 40px;
+}
+
+
+.input{
+    margin-top: 50px;
+}
+
+#text1{
+    font-size: 30px;
+    color: rgb(231, 231, 231);
+    margin-top: 160px;
+    margin-bottom: 45px;
+   
+}
+
+.container2{
+    
+}
+

@@ -1,0 +1,35 @@
+.container{
+    margin-top: 160px;
+}
+body {
+    background-image: url("../../assets/bg4.jpg");
+    background-repeat: no-repeat; 
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+row{
+    margin-top:60px;
+}
+
+p{color: antiquewhite;}
+span {
+    display: inline; 
+}
+
+a {
+    color: inherit; 
+    text-decoration: underline;
+}
+
+a:hover {
+    color: inherit; 
+    text-decoration: underline; 
+}
+#done{background-color:#FF8600;
+width: 100px;
+}
+
+#switch {background-color:#FF8600;}
+#bio{resize:none;}
