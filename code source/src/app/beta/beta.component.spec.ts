@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AffichePostComponent } from './affiche-post.component';
+import { BetaComponent } from './beta.component';
 
-describe('AffichePostComponent', () => {
-  let component: AffichePostComponent;
-  let fixture: ComponentFixture<AffichePostComponent>;
+describe('BetaComponent', () => {
+  let component: BetaComponent;
+  let fixture: ComponentFixture<BetaComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [AffichePostComponent]
+      declarations: [BetaComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(AffichePostComponent);
+    fixture = TestBed.createComponent(BetaComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

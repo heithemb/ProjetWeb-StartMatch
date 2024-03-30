@@ -13,8 +13,11 @@ import { SuggestedComponent } from './suggested/suggested.component';
 import { HeadernewsComponent } from './headernews/headernews.component';
 import { NavbarnewsComponent } from './navbarnews/navbarnews.component';
 import { ProfilComponent } from './profil/profil.component';
+import { SearchfilterComponent } from './searchfilter/searchfilter.component';
+import { SearchComponent } from './search/search.component';
+import { PostAffComponent } from './post-aff/post-aff.component';
 import { FiltrageComponent } from './filtrage/filtrage.component';
-import { AffichePostComponent } from './affiche-post/affiche-post.component';
+import { BetaComponent } from './beta/beta.component';
 
 
 @NgModule({
@@ -29,8 +32,11 @@ import { AffichePostComponent } from './affiche-post/affiche-post.component';
     HeadernewsComponent,
     NavbarnewsComponent,
     ProfilComponent,
+    SearchfilterComponent,
+    SearchComponent,
+    PostAffComponent,
     FiltrageComponent,
-    AffichePostComponent,
+    BetaComponent,
 
   ],
   imports: [

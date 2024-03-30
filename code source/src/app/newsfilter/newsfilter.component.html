@@ -1,62 +1,127 @@
 
 <div class="row">
-    <div class="col-1 offset-9">
-        <p class="d-inline-flex gap-1">
-            <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" id="btf">
-              filter
-            </button>
-          </p>
-    </div>
+  <div class="col-2">
+    <p class="d-inline-flex gap-1">
+      <button
+        class="btn btn-sm btn-success"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseExample"
+        aria-expanded="false"
+        aria-controls="collapseExample"
+        id="btf">
+        filter
+      </button>
+    </p>
+  </div>
+  <div class="collapse col" id="collapseExample">
+    <form action="">
+      <div class="btn-group">
+        <div class="dropdown">
+          <button
+            class="btn btn-sm btn-outline-secondary dropdown-toggle"
+            type="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            year of experience
+          </button>
+          <ul class="dropdown-menu">
+            <li>
+              <div class="dropdown-item">
+                <input
+                  type="checkbox"
+                  class="form-check-input"
+                  value="more than 20"
+                />more than 20
+              </div>
+            </li>
+            <li>
+              <div class="dropdown-item">
+                <input
+                  type="checkbox"
+                  class="form-check-input"
+                  value="between 5 and 20"
+                />between 5 and 20
+              </div>
+            </li>
+            <li>
+              <div class="dropdown-item">
+                <input
+                  type="checkbox"
+                  class="form-check-input"
+                  value="less than 5"
+                />less than 5
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="dropdown">
+          <button
+            class="btn btn-sm btn-outline-secondary dropdown-toggle"
+            type="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            field
+          </button>
+          <ul class="dropdown-menu menu-scroll">
+            <li *ngFor="let val of field">
+              <div class="dropdown-item">
+                <input
+                  type="checkbox"
+                  class="form-check-input"
+                  [value]="val"
+                />{{val}}
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="dropdown">
+          <button
+            class="btn btn-sm btn-outline-secondary dropdown-toggle"
+            type="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            status
+          </button>
+          <ul class="dropdown-menu">
+            <li>
+              <div class="dropdown-item">
+                <input
+                  type="checkbox"
+                  class="form-check-input"
+                  value="founder"
+                />founder
+              </div>
+            </li>
+            <li>
+              <div class="dropdown-item">
+                <input
+                  type="checkbox"
+                  class="form-check-input"
+                  value="co-founder"
+                />co-founder
+              </div>
+            </li>
+            <li>
+              <div class="dropdown-item">
+                <input
+                  type="checkbox"
+                  class="form-check-input"
+                  value="investor"
+                />investor
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-sm btn-outline-danger">save</button>
+      <button type="reset" class="btn btn-sm btn-outline-info">reset</button>
+    </form>
+  </div>
 </div>
-    <div class="row">
-          <div class="collapse col" id="collapseExample">
-            <form action="">
-                <div class="col">
-                    <div class="dropdown">
-                        <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        year of experience
-                        </button>
-                        <ul class="dropdown-menu">
-                          <li>
-                            <div class="dropdown-item">
-                              <input
-                                type="checkbox"
-                                class="form-check-input"
-                                value="more than 20">more than 20
-                            </div>
-                          </li>
-                          <li><div class="dropdown-item"><input type="checkbox" class="form-check-input" value="between 5 and 20">between 5 and 20</div></li>
-                          <li><div class="dropdown-item"><input type="checkbox" class="form-check-input" value="less than 5">less than 5</div></li>
-                        </ul>
-                      </div>
-                </div>
-                <div class="col">
-                    <div class="dropdown">
-                        <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                          field
-                        </button>
-                        <ul class="dropdown-menu">
-                          <li *ngFor="let val of field"><div class="dropdown-item"><input type="checkbox" class="form-check-input" [value]="val">{{val}}</div></li>
-                        </ul>
-                      </div>
-                </div>
-                <div class="col">
-                    <div class="dropdown">
-                        <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                          status
-                        </button>
-                        <ul class="dropdown-menu">
-                          <li><div class="dropdown-item"><input type="checkbox" class="form-check-input" value="founder">founder</div></li>
-                          <li><div class="dropdown-item"><input type="checkbox" class="form-check-input" value="co-founder">co-founder</div></li>
-                          <li><div class="dropdown-item"><input type="checkbox" class="form-check-input" value="investor">investor</div></li>
-                        </ul>
-                      </div>
-                </div>
-                <div class="col-1"><button type="submit" class="btn btn-danger">save</button>
-                </div>
-                <div class="col-1"><button type="reset" class="btn btn-light">reset</button>
-                </div>
-            </form>
-          </div>
-    </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
