@@ -1,0 +1,30 @@
+.profile-container{
+    width:100%;
+    background: #ffffff;
+    border-radius: 6px;
+    padding: 20px;
+    padding-top: 0px;
+    color: #282828;}
+
+.profile-data span{
+    font-size : 11px;
+    color: #4f4f4f;
+    margin-top: 0;}
+
+#text{padding-left:13px;}
+
+.profile-data{
+    display: flex ;
+    align-items: center;
+    padding-top:0px;}
+
+#user-picture{width:60px;
+    height: 60px;
+    border-radius:50% ;}
+#user-name{padding-top:27px;
+font-size: 18px; }
+
+
+#user-field{padding-top:0px}
+
+

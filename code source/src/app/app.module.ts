@@ -15,9 +15,19 @@ import { NavbarnewsComponent } from './navbarnews/navbarnews.component';
 import { ProfilComponent } from './profil/profil.component';
 import { SearchfilterComponent } from './searchfilter/searchfilter.component';
 import { SearchComponent } from './search/search.component';
+<<<<<<< HEAD
 import { PostAffComponent } from './post-aff/post-aff.component';
 import { FiltrageComponent } from './filtrage/filtrage.component';
 import { BetaComponent } from './beta/beta.component';
+=======
+import { LandingpageComponent } from './landingpage/landingpage.component';
+import { CreatePostComponent } from './create-post/create-post.component';
+import { FormPersonComponent } from './form-person/form-person.component';
+import { FormStartupComponent } from './form-startup/form-startup.component';
+import { LoginFormComponent } from './login-form/login-form.component';
+import { ProfileSearchComponent } from './profile-search/profile-search.component';
+import { ButtonManageComponent } from './button-manage/button-manage.component';
+>>>>>>> d75b8a3bac95292246667f5983ea1dbe95af30bd
 
 
 @NgModule({
@@ -34,9 +44,19 @@ import { BetaComponent } from './beta/beta.component';
     ProfilComponent,
     SearchfilterComponent,
     SearchComponent,
+<<<<<<< HEAD
     PostAffComponent,
     FiltrageComponent,
     BetaComponent,
+=======
+    LandingpageComponent,
+    CreatePostComponent,
+    FormPersonComponent,
+    FormStartupComponent,
+    LoginFormComponent,
+    ProfileSearchComponent,
+    ButtonManageComponent,
+>>>>>>> d75b8a3bac95292246667f5983ea1dbe95af30bd
 
   ],
   imports: [
