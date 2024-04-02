@@ -43,3 +43,7 @@ button.btn1{
         max-width: 200px;
         min-width: 200px;
     }
+    a{
+        color:white ;
+        text-decoration: none;
+    }
