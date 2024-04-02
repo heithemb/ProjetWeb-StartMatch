@@ -1,0 +1,32 @@
+body{
+    background-image: url("../../assets/bg4.jpg");
+    background-repeat: no-repeat; 
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+#bg{
+    padding-bottom:50px;
+}
+#nav{
+    padding-left:90px;
+}
+h1{
+    font-weight: bold;
+    font-family:fantasy;
+    color:#E3E7FF;
+}
+h6{
+    color:#E3E7FF;
+}
+h3{
+    color:#E3E7FF;
+}
+a {
+    text-decoration: none;
+  }
+.card{
+    border-radius: 15px;
+    background-color:rgba(157, 211, 254, 0.3);
+   color:white;
+}
