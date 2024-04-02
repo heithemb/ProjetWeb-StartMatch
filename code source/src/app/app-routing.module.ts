@@ -18,7 +18,7 @@ const routes: Routes = [
   {path:'form-startup',component:FormStartupComponent},
   {path:'landingpage',component:LandingpageComponent},
   {path:'login',component:LoginFormComponent},
-  {path:'',redirectTo: 'login', pathMatch: 'full'},
+  {path:'',redirectTo: 'signin', pathMatch: 'full'},
 ];
 
 @NgModule({
