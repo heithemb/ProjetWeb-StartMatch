@@ -1,0 +1,31 @@
+<body>
+    <div class="container-fluid">
+
+<div class="row">
+    <div class="col">
+        <div class="card cus-bg" style="width: 28rem; background-color: rgba(165, 42, 42, 0.719);">
+            <!-- <img src="../../assets/back.png" class="card-img" alt="...">
+            <div class="card-img-overlay"> -->
+                <div class="card-header cus-bg">
+                  <br>
+                  <h4> Reported people</h4>
+                  </div>
+                  <ul class="list-group list-group-flush cus-bg" >
+                    <li *ngFor="let profile of reported" class="list-group-item cus-bg">
+                        <div class="row ">                        <div class="col-3 align-items">
+                          <a routerLink='/OtherPorfile' routerLinkActive="active"><img [src]="profile.image" height="45" width="51" id="pdp" class="rounded-circle" ></a>
+                      </div>
+                        <div class="col-6 align-items">
+                          <a routerLink='/OtherPorfile' style="text-decoration: none; color: black;"><p  style="margin-top: 11px;" id="profile-name">{{profile.name}}</p></a>
+                        </div><div class="col-3 align-items">
+                          <button type="click" class="btn" style="background-color: rgba(0, 0, 0, 0.715); height:40px;"><p style="color: rgb(239, 195, 195);">Delete</p></button>
+                          </div> 
+                      </div>
+                    </li>
+                  </ul>
+                
+<!--             </div>
+ -->          </div>
+    </div>
+</div>
+    </div></body>
