@@ -40,6 +40,8 @@ import { UpdatepostComponent } from './updatepost/updatepost.component';
 import { UpdatePostintComponent } from './update-postint/update-postint.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { Contactus2Component } from './contactus2/contactus2.component';
+import { PrivacyComponent } from './privacy/privacy.component';
+import { HeaderadminComponent } from './headeradmin/headeradmin.component';
 
 
 @NgModule({
@@ -81,6 +83,8 @@ import { Contactus2Component } from './contactus2/contactus2.component';
     UpdatePostintComponent,
     ContactusComponent,
     Contactus2Component,
+    PrivacyComponent,
+    HeaderadminComponent,
 
   ],
   imports: [

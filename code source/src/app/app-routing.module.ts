@@ -18,6 +18,7 @@ import { LoginFormComponent } from './login-form/login-form.component';
 import { UpdatePostintComponent } from './update-postint/update-postint.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { Contactus2Component } from './contactus2/contactus2.component';
+import { PrivacyComponent } from './privacy/privacy.component';
 const routes: Routes = [
   /*{path:'',redirectTo:'newsfeed', pathMatch: 'full'},*/
   {path:'newsfeed',component:NewsfeedComponent},
@@ -42,6 +43,7 @@ const routes: Routes = [
   {path:'contactus',component:ContactusComponent},
   {path:'contactus2',component:Contactus2Component},
   {path:'footer',component:FooterComponent},
+  {path:'privacy',component:PrivacyComponent},
   {path:'',redirectTo: 'landingpage', pathMatch: 'full'},
 ];
 
