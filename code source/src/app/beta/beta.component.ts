@@ -10,7 +10,7 @@ export class BetaComponent {
   @Input() post:Post=
   {
     picture:"https://hackspirit.com/wp-content/uploads/2021/06/Copy-of-Rustic-Female-Teen-Magazine-Cover.jpg",
-    person_name:"Najla L Fatena",
+    person_name:"Lina Belhadj",
     person_status:"Computer science student",
     post_date:" 25 Nov 2023 at 23:00",
     status:"founder",

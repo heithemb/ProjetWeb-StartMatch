@@ -16,10 +16,10 @@
         <span [ngClass]="{'status badge badge-pill badge-warning':post.status==='founder','status1 badge badge-pill badge-warning':post.status==='co-founder'}" >{{post.status}}</span>
         <div class="card-body pos">
             <div class="text_of_post col-12 mt-2">
-                <p class="font">{{post.text_content}}</p>
+                <a routerLink='/consultpost' class="text-dark" style="text-decoration:none;"><p class="font">{{post.text_content}}</p></a>
             </div>
         <div class="mb-3 ">
-            <img  class="card-img-bottom " [src]= "post.media_content"/>
+           <a routerLink='/consultpost'> <img  class="card-img-bottom " [src]= "post.media_content"/></a>
         </div>
 
         <div class="flexy-2">

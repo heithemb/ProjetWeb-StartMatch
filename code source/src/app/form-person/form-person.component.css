@@ -33,3 +33,7 @@ width: 100px;
 
 #switch {background-color:#FF8600;}
 #bio{resize:none;}
+a.btn{
+    color:white ;
+    text-decoration: none;
+}

@@ -18,6 +18,16 @@ import { SearchComponent } from './search/search.component';
 import { PostAffComponent } from './post-aff/post-aff.component';
 import { FiltrageComponent } from './filtrage/filtrage.component';
 import { BetaComponent } from './beta/beta.component';
+import { LandingpageComponent } from './landingpage/landingpage.component';
+import { CreatePostComponent } from './create-post/create-post.component';
+import { FormPersonComponent } from './form-person/form-person.component';
+import { FormStartupComponent } from './form-startup/form-startup.component';
+import { LoginFormComponent } from './login-form/login-form.component';
+import { ProfileSearchComponent } from './profile-search/profile-search.component';
+import { ButtonManageComponent } from './button-manage/button-manage.component';
+import { ConsultpostComponent } from './consultpost/consultpost.component';
+import { SigninComponent } from './signin/signin.component';
+import { AboutUsComponent } from './about-us/about-us.component';
 
 
 @NgModule({
@@ -37,6 +47,16 @@ import { BetaComponent } from './beta/beta.component';
     PostAffComponent,
     FiltrageComponent,
     BetaComponent,
+    LandingpageComponent,
+    CreatePostComponent,
+    FormPersonComponent,
+    FormStartupComponent,
+    LoginFormComponent,
+    ProfileSearchComponent,
+    ButtonManageComponent,
+    ConsultpostComponent,
+    SigninComponent,
+    AboutUsComponent,
 
   ],
   imports: [

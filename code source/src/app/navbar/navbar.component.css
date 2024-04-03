@@ -20,4 +20,7 @@ button.btn1{
         border-bottom-right-radius: 22px;
         margin-left: 3px
     }
-    
+    a{
+        color:white ;
+        text-decoration: none;
+    }
