@@ -20,8 +20,8 @@ span {
 }
 
 a {
-    color: inherit; 
-    text-decoration: underline;
+    color: white; 
+    text-decoration: none;
 }
 
 a:hover {

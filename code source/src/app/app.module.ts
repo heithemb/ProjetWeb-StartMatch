@@ -34,6 +34,9 @@ import { ConsultpostComponent } from './consultpost/consultpost.component';
 import { SigninComponent } from './signin/signin.component';
 import { HeaderlandingComponent } from './headerlanding/headerlanding.component';
 import { AboutUsComponent } from './about-us/about-us.component';
+import { PostmanageComponent } from './postmanage/postmanage.component';
+import { UpdatepostComponent } from './updatepost/updatepost.component';
+import { UpdatePostintComponent } from './update-postint/update-postint.component';
 
 
 @NgModule({
@@ -69,6 +72,9 @@ import { AboutUsComponent } from './about-us/about-us.component';
     SigninComponent,
     HeaderlandingComponent,
     AboutUsComponent,
+    PostmanageComponent,
+    UpdatepostComponent,
+    UpdatePostintComponent,
 
   ],
   imports: [
