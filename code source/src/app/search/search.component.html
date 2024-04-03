@@ -1,25 +1,40 @@
-<app-header></app-header>
+<div class="container-fluid" id="bg">
+  <app-header></app-header>
 <br>
-<app-searchfilter></app-searchfilter>
-<br>
-<div id="d1">
-    <div class="card" style="width: 18rem;">
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">
-            selected status
+<app-filtrage></app-filtrage>
+  <br>
+  <div class="row"><div class="col offset-1"><app-searchfilter></app-searchfilter>
+    <br></div></div>
+  <div class="row">
+      <div class="col-3 offset-1" style="margin-bottom: 20px;">
+        <div class="row d1">
+          <div class="col" id="c">
+            <div class="card d1" style="width: 18rem;">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                  selected status
+                  <br>
+                  <span *ngFor="let item of shared.checkedsta" class="badge rounded-pill text-bg-light text-dark">{{item}}</span>
+                </li>
+                <li class="list-group-item">
+                  selected type <br> 
+                  <span *ngFor="let it of shared.checkedtype" class="badge rounded-pill text-bg-light text-dark">{{it}}</span>
+                </li>
+                <li class="list-group-item">selected experience <br>
+                  <span *ngFor="let item of shared.checkedex" class="badge rounded-pill text-bg-light text-dark">{{item}}</span>
+              </li>
+                <li class="list-group-item">selected fileds <br>
+                  <span *ngFor="let item of shared.checkedfield" class="badge rounded-pill text-bg-light text-dark">{{item}}</span>
+              </li>
+              </ul>
+            </div>
             <br>
-            <span *ngFor="let item of shared.checkedsta" class="badge rounded-pill text-bg-light text-dark">{{item}}</span>
-          </li>
-          <li class="list-group-item">
-            selected type <br> 
-            <span *ngFor="let it of shared.checkedtype" class="badge rounded-pill text-bg-light text-dark">{{it}}</span>
-          </li>
-          <li class="list-group-item">selected experience <br>
-            <span *ngFor="let item of shared.checkedex" class="badge rounded-pill text-bg-light text-dark">{{item}}</span>
-        </li>
-          <li class="list-group-item">selected fileds <br>
-            <span *ngFor="let item of shared.checkedfield" class="badge rounded-pill text-bg-light text-dark">{{item}}</span>
-        </li>
-        </ul>
+        </div>
+        </div>
       </div>
-</div>
+      <div class="col-lg-6 ">
+        <app-profile-search></app-profile-search><br>
+          <app-beta></app-beta>
+      </div>
+  </div>
+  </div>

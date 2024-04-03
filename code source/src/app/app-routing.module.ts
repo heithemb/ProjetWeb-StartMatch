@@ -4,9 +4,11 @@ import { FooterComponent } from './footer/footer.component';
 import { SearchComponent } from './search/search.component';
 import { NewsfeedComponent } from './newsfeed/newsfeed.component';
 import { ProfilComponent } from './profil/profil.component';
+import { ConsultpostComponent } from './consultpost/consultpost.component';
 const routes: Routes = [
+  {path:'',redirectTo:'newsfeed', pathMatch: 'full'},
   {path:'newsfeed',component:NewsfeedComponent},
-  {path:'',redirectTo: 'newsfeed', pathMatch: 'full'},
+  {path:'consultpost',component:ConsultpostComponent},
   {path:'search',component:SearchComponent},
   {path:'profile',component:ProfilComponent}
 ];

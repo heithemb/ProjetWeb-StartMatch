@@ -25,6 +25,7 @@ import { FormStartupComponent } from './form-startup/form-startup.component';
 import { LoginFormComponent } from './login-form/login-form.component';
 import { ProfileSearchComponent } from './profile-search/profile-search.component';
 import { ButtonManageComponent } from './button-manage/button-manage.component';
+import { ConsultpostComponent } from './consultpost/consultpost.component';
 
 
 @NgModule({
@@ -51,6 +52,7 @@ import { ButtonManageComponent } from './button-manage/button-manage.component';
     LoginFormComponent,
     ProfileSearchComponent,
     ButtonManageComponent,
+    ConsultpostComponent,
 
   ],
   imports: [

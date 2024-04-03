@@ -41,7 +41,14 @@ export class SearchfilterComponent {
       }
     }
     }
-    console.log(this.shared.checkedex);
+  }
+  reset(){
+    this.selectedFilters = document.querySelectorAll<HTMLInputElement>('input[type="checkbox"]:checked');
+    this.selectedFiltersA = Array.from(this.selectedFilters);
+    this.shared.checkedtype.length=0;
+    this.shared.checkedex.length=0;
+    this.shared.checkedfield.length=0;
+    this.shared.checkedsta.length=0;
   }
 
 }
