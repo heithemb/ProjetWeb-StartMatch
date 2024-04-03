@@ -10,7 +10,7 @@ import {  FormPersonComponent} from './form-person/form-person.component';
 import {  OtherPorfileComponent} from './other-porfile/other-porfile.component';
 import {  ReportedComponent} from './reported/reported.component';
 import {  UpdateProfileComponent} from './update-profile/update-profile.component';
-
+import{AboutUsComponent} from './about-us/about-us.component';
 
 import { ConsultpostComponent } from './consultpost/consultpost.component';
 import {SigninComponent } from './signin/signin.component';
@@ -32,6 +32,7 @@ const routes: Routes = [
   {path:'form-startup',component:FormStartupComponent},
   {path:'landingpage',component:LandingpageComponent},
   {path:'login',component:LoginFormComponent},
+  {path:'aboutus',component:AboutUsComponent},
   {path:'',redirectTo: 'signin', pathMatch: 'full'},
 ];
 
