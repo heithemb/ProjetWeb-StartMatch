@@ -34,9 +34,15 @@ import { ConsultpostComponent } from './consultpost/consultpost.component';
 import { SigninComponent } from './signin/signin.component';
 import { HeaderlandingComponent } from './headerlanding/headerlanding.component';
 import { AboutUsComponent } from './about-us/about-us.component';
+import { Headerlanding2Component } from './headerlanding2/headerlanding2.component';
 import { PostmanageComponent } from './postmanage/postmanage.component';
 import { UpdatepostComponent } from './updatepost/updatepost.component';
 import { UpdatePostintComponent } from './update-postint/update-postint.component';
+import { ContactusComponent } from './contactus/contactus.component';
+import { Contactus2Component } from './contactus2/contactus2.component';
+import { PrivacyComponent } from './privacy/privacy.component';
+import { HeaderadminComponent } from './headeradmin/headeradmin.component';
+import { Aboutus2Component } from './aboutus2/aboutus2.component';
 
 
 @NgModule({
@@ -72,9 +78,15 @@ import { UpdatePostintComponent } from './update-postint/update-postint.componen
     SigninComponent,
     HeaderlandingComponent,
     AboutUsComponent,
+    Headerlanding2Component,
     PostmanageComponent,
     UpdatepostComponent,
     UpdatePostintComponent,
+    ContactusComponent,
+    Contactus2Component,
+    PrivacyComponent,
+    HeaderadminComponent,
+    Aboutus2Component,
 
   ],
   imports: [

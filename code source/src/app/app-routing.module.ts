@@ -11,11 +11,15 @@ import {  OtherPorfileComponent} from './other-porfile/other-porfile.component';
 import {  ReportedComponent} from './reported/reported.component';
 import {  UpdateProfileComponent} from './update-profile/update-profile.component';
 import{AboutUsComponent} from './about-us/about-us.component';
-
+import { AdminfirstpannelComponent } from './adminfirstpannel/adminfirstpannel.component';
 import { ConsultpostComponent } from './consultpost/consultpost.component';
 import {SigninComponent } from './signin/signin.component';
 import { LoginFormComponent } from './login-form/login-form.component';
 import { UpdatePostintComponent } from './update-postint/update-postint.component';
+import { ContactusComponent } from './contactus/contactus.component';
+import { Contactus2Component } from './contactus2/contactus2.component';
+import { PrivacyComponent } from './privacy/privacy.component';
+import { Aboutus2Component } from './aboutus2/aboutus2.component';
 const routes: Routes = [
   /*{path:'',redirectTo:'newsfeed', pathMatch: 'full'},*/
   {path:'newsfeed',component:NewsfeedComponent},
@@ -33,9 +37,15 @@ const routes: Routes = [
   {path:'form-startup',component:FormStartupComponent},
   {path:'landingpage',component:LandingpageComponent},
   {path:'login',component:LoginFormComponent},
+  {path:'about-us2',component:Aboutus2Component},
+  {path:'adminfirstpannel',component:AdminfirstpannelComponent},
   {path:'about-us',component:AboutUsComponent},
   {path:'updatepost',component:UpdatePostintComponent},
-  {path:'',redirectTo: 'signin', pathMatch: 'full'},
+  {path:'contact-us',component:ContactusComponent},
+  {path:'contactus2',component:Contactus2Component},
+  {path:'footer',component:FooterComponent},
+  {path:'privacy',component:PrivacyComponent},
+  {path:'',redirectTo: 'landingpage', pathMatch: 'full'},
 ];
 
 @NgModule({
