@@ -34,7 +34,7 @@ import { ConsultpostComponent } from './consultpost/consultpost.component';
 import { SigninComponent } from './signin/signin.component';
 import { HeaderlandingComponent } from './headerlanding/headerlanding.component';
 import { AboutUsComponent } from './about-us/about-us.component';
-
+import { Headerlanding2Component } from './headerlanding2/headerlanding2.component';
 
 @NgModule({
   declarations: [
@@ -69,7 +69,7 @@ import { AboutUsComponent } from './about-us/about-us.component';
     SigninComponent,
     HeaderlandingComponent,
     AboutUsComponent,
-
+    Headerlanding2Component,
   ],
   imports: [
     BrowserModule,

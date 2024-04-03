@@ -11,7 +11,7 @@ import {  OtherPorfileComponent} from './other-porfile/other-porfile.component';
 import {  ReportedComponent} from './reported/reported.component';
 import {  UpdateProfileComponent} from './update-profile/update-profile.component';
 import{AboutUsComponent} from './about-us/about-us.component';
-
+import { AdminfirstpannelComponent } from './adminfirstpannel/adminfirstpannel.component';
 import { ConsultpostComponent } from './consultpost/consultpost.component';
 import {SigninComponent } from './signin/signin.component';
 import { LoginFormComponent } from './login-form/login-form.component';
@@ -33,6 +33,7 @@ const routes: Routes = [
   {path:'landingpage',component:LandingpageComponent},
   {path:'login',component:LoginFormComponent},
   {path:'aboutus',component:AboutUsComponent},
+  {path:'adminfirstpannel',component:AdminfirstpannelComponent},
   {path:'',redirectTo: 'signin', pathMatch: 'full'},
 ];
 
