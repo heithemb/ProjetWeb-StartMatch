@@ -1,5 +1,27 @@
+body{
+    background-image: url("../../assets/ba.png");
+    background-repeat: no-repeat; 
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
 .font{
     text-align: center;
     font-weight: 600;
     
+}
+.image{
+    width: 150px; 
+    height: 150px; 
+    border-radius: 50%; 
+    object-fit: cover;
+    
+}
+@media all and (min-width: 576px) and (max-width: 992px){
+    .image{
+        width: 100px; 
+        height: 100px; 
+        border-radius: 50%; 
+        object-fit: cover;
+    }
 }
