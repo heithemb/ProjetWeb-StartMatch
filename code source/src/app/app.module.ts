@@ -25,6 +25,7 @@ import { FormStartupComponent } from './form-startup/form-startup.component';
 import { LoginFormComponent } from './login-form/login-form.component';
 import { ProfileSearchComponent } from './profile-search/profile-search.component';
 import { ButtonManageComponent } from './button-manage/button-manage.component';
+import { ConsultpostComponent } from './consultpost/consultpost.component';
 import { SigninComponent } from './signin/signin.component';
 
 
@@ -52,6 +53,7 @@ import { SigninComponent } from './signin/signin.component';
     LoginFormComponent,
     ProfileSearchComponent,
     ButtonManageComponent,
+    ConsultpostComponent,
     SigninComponent,
 
   ],
