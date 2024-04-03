@@ -1,112 +1,111 @@
+<app-headerlanding></app-headerlanding>
 <body>
-<form class="form was-validated">
-    <div class="row">
-        <div class="col-sm-12 col-lg-6">
-            <label for="email" style="color: rgb(255, 255, 255); ">Email:</label>
-            <input required style=" width: 400px; margin-bottom: 35px; " type="email" class="form-control" id="email" style="background:#ffffff;">
-        </div>
-        <div class="col-sm-12 col-lg-6">
-            <label for="phone" style="color: rgb(255, 255, 255);">Phone number :</label>
-            <input  required style=" width: 400px; margin-bottom: 35px;" type="number" class="form-control" id="phone" style="background:#ffffff;">
-        </div>
-        
-    </div>
+<div class="container">
 
-    <div class="row">
-        <div class="col-sm-12 col-lg-6">
-            <label for="fname" style="color: rgb(255, 255, 255);">First name :</label>
-            <input required style=" width: 400px; margin-bottom: 35px;" type="text" class="form-control" id="fname" style="background:#ffffff;">
-        </div>
-
-        <div class="col-sm-12 col-lg-6">
-            <label for="lname" style="color: rgb(255, 255, 255);">Last name:</label>
-            <input required style=" width: 400px; margin-bottom: 35px;" type="text" class="form-control" id="lname" style="background:#ffffff;">
-        </div>
-        
-    </div>
-    <div class="row">
-        <div class="col-sm-12 col-lg-6">
-            <label for="pswd" style="color: rgb(255, 255, 255);">Password:</label>
-            <input required style=" width: 400px; margin-bottom: 0px;" type="password" class="form-control" id="pswd" style="background:#ffffff;" pattern=".{5,}" >
-            <div class="invalid-feedback" style="margin-bottom: 32px;">Enter at least 5 caracteres</div>
-        </div>
-        <div class="col-sm-12 col-lg-6">
-            <label for="confirmpsw" style="color: rgb(255, 255, 255);">Confirm Password :</label>
-            <input required style=" width: 400px; margin-bottom: 35px;" type="password"  pattern=".{5,}" class="form-control" id="confirmpsw" style="background:#ffffff;">
-        </div>
-        
-    </div>
-
-    <div class="row">
-        <div class="col-sm-12 col-lg-6">
-            <label for="yearExp" style="color: rgb(255, 255, 255);">Year of experience :</label>
-            <select required style=" width: 400px; margin-bottom: 35px;"  class="form-select"   id="yearExp" style="background:#ffffff;">
-                <option disabled selected value=""> </option>
-                <option>-5 years of experience</option>
-            <option>5-10 years of experience</option>
-            <option>+10 years of experience</option>
-            </select>
-        </div> 
-        <div class="col-sm-12 col-lg-6">
-            <label for="birth" style="color: rgb(255, 255, 255);">Date of Birth:</label>
-            <input  required style=" width: 400px; margin-bottom: 35px;" type="date" class="form-control" id="birth" style="background:#ffffff;">
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-sm-12 col-lg-6">
-            <label for="address" style="color: rgb(255, 255, 255);">Address:</label>
-            <input  required style=" width: 400px; margin-bottom: 35px;" type="text" class="form-control" id="address" style="background:#ffffff;">
-        </div>
-        <div class="col-sm-12 col-lg-6">
-            <label for="field" style="color: rgb(255, 255, 255);">Field:</label>
-            <input  required style=" width: 400px; margin-bottom: 35px; " type="text" class="form-control" id="field" style="background:#ffffff;">
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-12 col-lg-6">
-            <label for="skills" style="color: rgb(255, 255, 255);">Skills:</label>
-            <input  required style=" width: 400px; margin-bottom: 35px;" type="text" class="form-control" id="skills" style="background:#ffffff;">
-        </div>
-        <div class="col-sm-12 col-lg-6">
-            <label for="bio" style="color: rgb(255, 255, 255);">Bio :</label>
-            <textarea  style=" width: 400px; margin-bottom: 35px; " type="text" class="form-control" id="bio" style="background:#ffffff;"></textarea>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-sm-12 col-lg-6">
-            <p id="gender" style="color: rgb(255, 255, 255);">Gender:</p>
-            <div class="form-check form-check-inline">
-                <input  required type="radio" class="form-check-input" id="male" style="background:#ffffff;margin-bottom: 30px;" value="male">
-                <label class="form-check-label" for="male" style="color: #ffffff;">Male</label>
+    <form class="form was-validated">
+        <div class="row">
+            <div class="col-md-5 col-lg-4 offset-lg-1">
+                <label for="email" style="color: rgb(255, 255, 255); ">Email:</label>
+                <input required style=" width: 400px; margin-bottom: 35px; " type="email" class="form-control" id="email" style="background:#ffffff;">
             </div>
-            <div class="form-check form-check-inline">
-                <input required type="radio" class="form-check-input" id="female" style="background:#ffffff;" value="female">
-                <label class="form-check-label" for="female" style="color: #ffffff;">Female</label>
+            <div class="col-md-5  col-lg-4 offset-md-2 offset-lg-1">
+                <label for="phone" style="color: rgb(255, 255, 255);">Phone number :</label>
+                <input  required style=" width: 400px; margin-bottom: 35px;" type="number" class="form-control" id="phone" style="background:#ffffff;">
+            </div>
+            
+        </div>
+
+        <div class="row">
+            <div class="col-md-5 col-lg-4 offset-lg-1">
+                <label for="fname" style="color: rgb(255, 255, 255);">First name :</label>
+                <input required style=" width: 400px; margin-bottom: 35px;" type="text" class="form-control" id="fname" style="background:#ffffff;">
+            </div>
+
+            <div class="col-md-5  col-lg-4 offset-md-2 offset-lg-1">
+                <label for="lname" style="color: rgb(255, 255, 255);">Last name:</label>
+                <input required style=" width: 400px; margin-bottom: 35px;" type="text" class="form-control" id="lname" style="background:#ffffff;">
+            </div>
+            
+        </div>
+        <div class="row">
+            <div class="col-md-5 col-lg-4 offset-lg-1">
+                <label for="pswd" style="color: rgb(255, 255, 255);">Password:</label>
+                <input required style=" width: 400px; margin-bottom: 0px;" type="password" class="form-control" id="pswd" style="background:#ffffff;" pattern=".{5,}" >
+                <div class="invalid-feedback" style=" margin-bottom: 32px;">Enter at least 5 caracteres</div>
+            </div>
+            <div class="col-md-5  col-lg-4 offset-md-2 offset-lg-1">
+                <label for="confirmpsw" style="color: rgb(255, 255, 255);">Confirm Password :</label>
+                <input required style=" width: 400px; margin-bottom: 35px;" type="password"  pattern=".{5,}" class="form-control" id="confirmpsw" style="background:#ffffff;">
+            </div>
+            
+        </div>
+
+        <div class="row">
+            <div class="col-md-5 col-lg-4 offset-lg-1">
+                <label for="yearExp" style="color: rgb(255, 255, 255);">Year of experience :</label>
+                <select required style=" width: 400px; margin-bottom: 35px;"  class="form-select"   id="yearExp" style="background:#ffffff;">
+                    <option disabled selected value=""> </option>
+                    <option>-5 years of experience</option>
+                <option>5-10 years of experience</option>
+                <option>+10 years of experience</option>
+                </select>
+            </div> 
+            <div class="col-md-5  col-lg-4 offset-md-2 offset-lg-1">
+                <label for="birth" style="color: rgb(255, 255, 255);">Date of Birth:</label>
+                <input  required style=" width: 400px; margin-bottom: 35px;" type="date" class="form-control" id="birth" style="background:#ffffff;">
             </div>
         </div>
-        <div class="col-sm-12 col-lg-6">
-            <label for="job" style="color: rgb(255, 255, 255);">Job Position:</label>
-            <input required style=" width: 400px;" type="text" class="form-control" id="job" style="background:#ffffff;">
-        </div>
-    </div>
 
-<div class="row" style="margin-top: 70px;">
-    <div class="col d-flex align-items-center">
-        <p class="mb-0 me-2">I agree to our <span><a href="">Terms</a></span>, <span><a href="">Privacy Policy</a></span></p>
-        <div class="form-check form-switch">
-            <input class="form-check-input" type="checkbox" id="switch">
+        <div class="row">
+            <div class="col-md-5 col-lg-4 offset-lg-1">
+                <label for="address" style="color: rgb(255, 255, 255);">Address:</label>
+                <input  required style=" width: 400px; margin-bottom: 35px;" type="text" class="form-control" id="address" style="background:#ffffff;">
+            </div>
+            <div class="col-md-5  col-lg-4 offset-md-2 offset-lg-1">
+                <label for="field" style="color: rgb(255, 255, 255);">Field:</label>
+                <input  required style=" width: 400px; margin-bottom: 35px; " type="text" class="form-control" id="field" style="background:#ffffff;">
+            </div>
         </div>
-    </div>
+        <div class="row">
+            <div class="col-md-5 col-lg-4 offset-lg-1">
+                <label for="skills" style="color: rgb(255, 255, 255);">Skills:</label>
+                <input  required style=" width: 400px; margin-bottom: 35px;" type="text" class="form-control" id="skills" style="background:#ffffff;">
+            </div>
+            <div class="col-md-5  col-lg-4 offset-md-2 offset-lg-1">
+                <label for="bio" style="color: rgb(255, 255, 255);">Bio :</label>
+                <textarea  style=" width: 400px; margin-bottom: 35px; " type="text" class="form-control" id="bio" style="background:#ffffff;"></textarea>
+            </div>
+        </div>
 
+        <div class="row">
+            <div class="col-md-5 col-lg-4 offset-lg-1">
+                <p id="gender" style="color: rgb(255, 255, 255);">Gender:</p>
+                <div class="form-check form-check-inline">
+                    <input  required type="radio" class="form-check-input" id="male" name="gender" style="margin-bottom: 30px;" value="male">
+                    <label class="form-check-label" for="male" style="color: #ffffff;">Male</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input required type="radio" class="form-check-input" id="female" name="gender"  value="female">
+                    <label class="form-check-label" for="female" style="color: #ffffff;">Female</label>
+                </div>
+            </div>
+            <div class="col-md-5  col-lg-4 offset-md-2 offset-lg-1">
+                <label for="job" style="color: rgb(255, 255, 255);">Job Position:</label>
+                <input required style=" width: 400px;" type="text" class="form-control" id="job" style="background:#ffffff;">
+            </div>
+        </div>
     
-    <button type="submit" id="done" class="btn"><a class="btn" routerLink='/newsfeed'>Done</a></button>
+    <div class="row" style="margin-top: 70px;">
+        <div class="col d-flex align-items-center">
+            <p class="mb-0 me-2">I agree to our <span><a href="">Terms</a></span>, <span><a href="">Privacy Policy</a></span></p>
+            <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" id="switch">
+            </div>
+        </div>
 
+        <button type="click" id="done" class="btn btn-link" ><a routerLink='/newsfeed'>Done</a></button>
+    </div>
 
-
-
-
-</div>
-</form>
+    </form>
+    </div>
 </body>

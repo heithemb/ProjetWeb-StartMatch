@@ -1,70 +1,81 @@
+<app-headerlanding></app-headerlanding>
 <body>
-<form class="form was-validated">
-    <div class="row">
-        <div class="col-sm-12 col-lg-6">
-            <label for="fname" style="color: rgb(255, 255, 255);"> Name of start-up:</label>
-            <input required style=" width: 400px; margin-bottom: 35px;" type="text" class="form-control" id="fname" style="background:#ffffff;">
-            </div>
-        
-        <div class="col-sm-12 col-lg-6">
-            <label for="phone" style="color: rgb(255, 255, 255);">Phone Number:</label>
-            <input  required style=" width: 400px; margin-bottom: 35px;" type="number" class="form-control" id="phone" style="background:#ffffff;">
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-12 col-lg-6">
-            <label for="pswd" style="color: rgb(255, 255, 255);">Password:</label>
-            <input required style=" width: 400px; margin-bottom: 0px;" type="password" class="form-control" id="pswd" style="background:#ffffff;" pattern=".{5,}" >
-            <div class="invalid-feedback" style="margin-bottom: 32px;">Enter at least 5 caracteres</div>
-        </div>
-        <div class="col-sm-12 col-lg-6">
-            <label for="confirmpsw" style="color: rgb(255, 255, 255);">Confirm Password :</label>
-            <input required style=" width: 400px; margin-bottom: 35px;" type="password"  pattern=".{5,}" class="form-control" id="confirmpsw" style="background:#ffffff;">
-        </div>
-        
-    </div>
-
-    <div class="row">
-        <div class="col-sm-12 col-lg-6">
-            <label for="email" style="color: rgb(255, 255, 255); ">Email:</label>
-            <input required style=" width: 400px; margin-bottom: 35px; " type="email" class="form-control" id="email" style="background:#ffffff;">
-        </div>
-        <div class="col-sm-12 col-lg-6">
-                <label for="date" style="color: rgb(255, 255, 255);">Date of Creation:</label>
-                <input  required style=" width: 400px; margin-bottom: 35px;" type="date" class="form-control" id="date" style="background:#ffffff;">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-sm-12 col-lg-6">
-                <label for="address" style="color: rgb(255, 255, 255);">Address:</label>
-                <input  required style=" width: 400px; margin-bottom: 35px;" type="text" class="form-control" id="address" style="background:#ffffff;">
-            </div>
-
-
-            <div class="col-sm-12 col-lg-6">
-            <label for="field" style="color: rgb(255, 255, 255);">Field:</label>
-            <input  required style=" width: 400px; margin-bottom: 35px; " type="text" class="form-control" id="field" style="background:#ffffff;">
-        </div>
-        
-        
-    </div>
-    <div class="row"><div class="col-sm-12 col-lg-6">
-        <label for="bio" style="color: rgb(255, 255, 255);">Bio :</label>
-        <textarea  style=" width: 400px; margin-bottom: 35px; " type="text" class="form-control" id="bio" style="background:#ffffff;"></textarea>
-    </div></div>
-
-    <div class="row" style="margin-top: 70px;">
-        <div class="col d-flex align-items-center">
-            <p class="mb-0 me-2">I agree to our <span><a href="">Terms</a></span>, <span><a href="">Privacy Policy</a></span></p>
-            <div class="form-check form-switch">
-                <input class="form-check-input" type="checkbox" id="switch">
-            </div>
-        </div>
-
-        
-        <button type="click" id="done" class="btn btn-link" ><a class="btn" routerLink='/newsfeed'>Done</a></button>
+    <div class="container">
     
-    </div>
-</form>
-</body>
+        <form class="form was-validated">
+            <div class="row">
+                <div class="col-md-5 col-lg-4 offset-lg-1">
+                    <label for="fname" style="color: rgb(255, 255, 255);"> Name of start-up:</label>
+                    <input required style="  margin-bottom: 35px;" type="text" class="form-control" id="fname" style="background:#ffffff;">
+                    </div>
+                
+                <div class="col-md-5  col-lg-4 offset-md-2 offset-lg-1">
+                    <label for="phone" style="color: rgb(255, 255, 255);">Phone Number:</label>
+                    <input  required style=" width: 400px; margin-bottom: 35px;" type="number" class="form-control" id="phone" style="background:#ffffff;">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-5 col-lg-4 offset-lg-1">
+                    <label for="pswd" style="color: rgb(255, 255, 255);">Password:</label>
+                    <input required style=" width: 400px; margin-bottom: 0px;" type="password" class="form-control" id="pswd" style="background:#ffffff;" pattern=".{5,}" >
+                    <div class="invalid-feedback" style=" margin-bottom: 15px;">Enter at least 5 caracteres</div>
+                </div>
+                <div class="col-md-5 col-lg-4  offset-md-2 offset-lg-1">
+                    <label for="confirmpsw" style="color: rgb(255, 255, 255);">Confirm Password :</label>
+                    <input required style=" width: 400px; margin-bottom: 15px;" type="password"  pattern=".{5,}" class="form-control" id="confirmpsw" style="background:#ffffff;">
+                </div>
+                
+            </div>
+    
+            <div class="row">
+                <div class="col-md-5 col-lg-4 offset-lg-1">
+                    <label for="email" style="color: rgb(255, 255, 255); ">Email:</label>
+                    <input required style=" width: 400px; margin-bottom: 35px; " type="email" class="form-control" id="email" style="background:#ffffff;">
+                </div>
+                <div class="col-md-5 col-lg-4  offset-md-2 offset-lg-1">
+                    <label for="date" style="color: rgb(255, 255, 255);">Date of Creation:</label>
+                        <input  required style=" width: 400px; margin-bottom: 35px;" type="date" class="form-control" id="date" style="background:#ffffff;">
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-5 col-lg-4 offset-lg-1">
+                        <label for="address" style="color: rgb(255, 255, 255);">Address:</label>
+                        <input  required style=" width: 400px; margin-bottom: 35px;" type="text" class="form-control" id="address" style="background:#ffffff;">
+                    </div>
+    
+    
+                    <div class="col-md-5 col-lg-4  offset-md-2 offset-lg-1">
+                        <label for="field" style="color: rgb(255, 255, 255);">Field:</label>
+                    <input  required style=" width: 400px; margin-bottom: 35px; " type="text" class="form-control" id="field" style="background:#ffffff;">
+                </div>
+                
+                
+            </div>
+            <div class="row"> 
+                <div class="col-md-5 col-lg-4 offset-lg-1">
+                <label for="bio" style="color: rgb(255, 255, 255);">Bio :</label>
+                <textarea  style=" width: 400px; margin-bottom: 35px; " type="text" class="form-control" id="bio" style="background:#ffffff;"></textarea>
+            </div></div>
+    
+            <div class="row" style="margin-top: 70px;">
+                <div class="col d-flex align-items-center">
+                    <p class="mb-0 me-2">I agree to our <span><a href="">Terms</a></span>, <span><a href="">Privacy Policy</a></span></p>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="switch">
+                    </div>
+                </div>
+        
+                <button type="click" id="done" class="btn btn-link" [routerLink]="['/newsfeed']">Done</button>
+            
+            </div>
+        </form>
+            </div>
+    
+            
+        
+        
+        
+    </body>
+  
+    

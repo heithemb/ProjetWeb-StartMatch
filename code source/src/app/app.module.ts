@@ -25,8 +25,15 @@ import { FormStartupComponent } from './form-startup/form-startup.component';
 import { LoginFormComponent } from './login-form/login-form.component';
 import { ProfileSearchComponent } from './profile-search/profile-search.component';
 import { ButtonManageComponent } from './button-manage/button-manage.component';
+import { OtherPorfileComponent } from './other-porfile/other-porfile.component';
+import { AdminfirstpannelComponent } from './adminfirstpannel/adminfirstpannel.component';
+import { ReportedComponent } from './reported/reported.component';
+import { PostReportedComponent } from './post-reported/post-reported.component';
+import { UpdateProfileComponent } from './update-profile/update-profile.component';
 import { ConsultpostComponent } from './consultpost/consultpost.component';
 import { SigninComponent } from './signin/signin.component';
+import { HeaderlandingComponent } from './headerlanding/headerlanding.component';
+import { AboutUsComponent } from './about-us/about-us.component';
 
 
 @NgModule({
@@ -53,8 +60,15 @@ import { SigninComponent } from './signin/signin.component';
     LoginFormComponent,
     ProfileSearchComponent,
     ButtonManageComponent,
+    OtherPorfileComponent,
+    AdminfirstpannelComponent,
+    ReportedComponent,
+    PostReportedComponent,
+    UpdateProfileComponent,
     ConsultpostComponent,
     SigninComponent,
+    HeaderlandingComponent,
+    AboutUsComponent,
 
   ],
   imports: [

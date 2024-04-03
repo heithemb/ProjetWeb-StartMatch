@@ -16,11 +16,20 @@
     </div>
     <div class="row d-flex align-items-center" id="bio">
         <div class="offset-md-4 col-md-4 text-center">
-            <p>
-                computer science engineer
-                istic 22-25 ssssssssss ssssssss ssss ssssssssssssss s
+            <p style="text-align: center;">
+                computer science engineer<br/>
+                I have experience in business and startup founding
             </p>
+            <app-button-manage></app-button-manage>
         </div>
     </div>
+    <!--<app-beta></app-beta>-->
+    <div class="container">
+        <div class="row">
+            <ng-container *ngFor="let post of tab">
+                <app-beta [post]="post"></app-beta>
+              </ng-container>
+        </div>
+      </div>
 </div>
 </body>
