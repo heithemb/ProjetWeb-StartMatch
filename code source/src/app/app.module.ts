@@ -25,7 +25,11 @@ import { FormStartupComponent } from './form-startup/form-startup.component';
 import { LoginFormComponent } from './login-form/login-form.component';
 import { ProfileSearchComponent } from './profile-search/profile-search.component';
 import { ButtonManageComponent } from './button-manage/button-manage.component';
+<<<<<<< HEAD
 import { ConsultpostComponent } from './consultpost/consultpost.component';
+=======
+import { SigninComponent } from './signin/signin.component';
+>>>>>>> 1a5f978f2b878c9419e172b102ff4313dda99b20
 
 
 @NgModule({
@@ -52,7 +56,11 @@ import { ConsultpostComponent } from './consultpost/consultpost.component';
     LoginFormComponent,
     ProfileSearchComponent,
     ButtonManageComponent,
+<<<<<<< HEAD
     ConsultpostComponent,
+=======
+    SigninComponent,
+>>>>>>> 1a5f978f2b878c9419e172b102ff4313dda99b20
 
   ],
   imports: [

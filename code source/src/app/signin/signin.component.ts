@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 import { SharedService } from '../shared.service';
 @Component({
-  selector: 'app-landingpage',
-  templateUrl: './landingpage.component.html',
-  styleUrl: './landingpage.component.css'
+  selector: 'app-signin',
+  templateUrl: './signin.component.html',
+  styleUrl: './signin.component.css'
 })
-export class LandingpageComponent {
+export class SigninComponent {
   constructor(public shared:SharedService ) {}
 }
