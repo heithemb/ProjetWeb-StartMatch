@@ -27,6 +27,7 @@ import { ProfileSearchComponent } from './profile-search/profile-search.componen
 import { ButtonManageComponent } from './button-manage/button-manage.component';
 import { ConsultpostComponent } from './consultpost/consultpost.component';
 import { SigninComponent } from './signin/signin.component';
+import { HeaderlandingComponent } from './headerlanding/headerlanding.component';
 
 
 @NgModule({
@@ -55,6 +56,7 @@ import { SigninComponent } from './signin/signin.component';
     ButtonManageComponent,
     ConsultpostComponent,
     SigninComponent,
+    HeaderlandingComponent,
 
   ],
   imports: [
