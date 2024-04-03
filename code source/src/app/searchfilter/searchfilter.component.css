@@ -7,7 +7,12 @@
 }
 .btn{
     margin-left: 0.3rem;
-    margin-top: 0rem;
+    margin-top: 0.2rem;
+    background-color:#ffffff;
+}
+.dd{
+    background-color: #ffffff;
+    border-radius: 25px;
 }
 .dd{
     background-color: #ffffff;

@@ -12,9 +12,14 @@ import {  ReportedComponent} from './reported/reported.component';
 import {  UpdateProfileComponent} from './update-profile/update-profile.component';
 
 
+import { ConsultpostComponent } from './consultpost/consultpost.component';
+import {SigninComponent } from './signin/signin.component';
+import { LoginFormComponent } from './login-form/login-form.component';
 const routes: Routes = [
+  /*{path:'',redirectTo:'newsfeed', pathMatch: 'full'},*/
   {path:'newsfeed',component:NewsfeedComponent},
-  {path:'',redirectTo: 'newsfeed', pathMatch: 'full'},
+  {path:'consultpost',component:ConsultpostComponent},
+  {path:'signin',component:SigninComponent},
   {path:'search',component:SearchComponent},
   {path:'profile',component:ProfilComponent},
   {path:'landing',component:LandingpageComponent},
@@ -22,12 +27,12 @@ const routes: Routes = [
   {path:'formperson',component:FormPersonComponent},
   {path:'OtherPorfile',component:OtherPorfileComponent},
   {path:'Reported',component:ReportedComponent},
-  {path:'updateprofile',component:UpdateProfileComponent}
-
-
-
-  
-
+  {path:'updateprofile',component:UpdateProfileComponent},
+  {path:'form-person',component:FormPersonComponent},
+  {path:'form-startup',component:FormStartupComponent},
+  {path:'landingpage',component:LandingpageComponent},
+  {path:'login',component:LoginFormComponent},
+  {path:'',redirectTo: 'signin', pathMatch: 'full'},
 ];
 
 @NgModule({

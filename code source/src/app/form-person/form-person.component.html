@@ -1,3 +1,4 @@
+<app-headerlanding></app-headerlanding>
 <body>
 <div class="container">
 
@@ -80,11 +81,11 @@
             <div class="col-md-5 col-lg-4 offset-lg-1">
                 <p id="gender" style="color: rgb(255, 255, 255);">Gender:</p>
                 <div class="form-check form-check-inline">
-                    <input  required type="radio" class="form-check-input" id="male" style="background:#ffffff;margin-bottom: 30px;" value="male">
+                    <input  required type="radio" class="form-check-input" id="male" name="gender" style="margin-bottom: 30px;" value="male">
                     <label class="form-check-label" for="male" style="color: #ffffff;">Male</label>
                 </div>
                 <div class="form-check form-check-inline">
-                    <input required type="radio" class="form-check-input" id="female" style="background:#ffffff;" value="female">
+                    <input required type="radio" class="form-check-input" id="female" name="gender"  value="female">
                     <label class="form-check-label" for="female" style="color: #ffffff;">Female</label>
                 </div>
             </div>
@@ -102,14 +103,9 @@
             </div>
         </div>
 
-        
-        <button type="submit" id="done" class="btn">Done</button>
-    
-    
-    
-    
-    
+        <button type="click" id="done" class="btn btn-link" ><a routerLink='/newsfeed'>Done</a></button>
     </div>
+
     </form>
     </div>
 </body>

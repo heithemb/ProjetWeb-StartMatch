@@ -30,6 +30,9 @@ import { AdminfirstpannelComponent } from './adminfirstpannel/adminfirstpannel.c
 import { ReportedComponent } from './reported/reported.component';
 import { PostReportedComponent } from './post-reported/post-reported.component';
 import { UpdateProfileComponent } from './update-profile/update-profile.component';
+import { ConsultpostComponent } from './consultpost/consultpost.component';
+import { SigninComponent } from './signin/signin.component';
+import { HeaderlandingComponent } from './headerlanding/headerlanding.component';
 
 
 @NgModule({
@@ -61,6 +64,9 @@ import { UpdateProfileComponent } from './update-profile/update-profile.componen
     ReportedComponent,
     PostReportedComponent,
     UpdateProfileComponent,
+    ConsultpostComponent,
+    SigninComponent,
+    HeaderlandingComponent,
 
   ],
   imports: [

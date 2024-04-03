@@ -1,10 +1,10 @@
-<div class="container">
+<!--<div class="container">
     <div class="card">
         <div class="card-body">
             <div class="flexy">
                 <a routerLink="/OtherPorfile" routerLinkActive="active" style="text-decoration: none; color: black;"><img  class="img-fluid eclipse"  src="../../assets/images (2).jpg" alt="person/startup_img"></a>
                 <div class="flexy-1">
-                    <a routerLink="/OtherPorfile" routerLinkActive="active" style="text-decoration: none; color: black;"><span  class="name">Najla BenAhmed</span></a>
+                    <a routerLink='/OtherPorfile' routerLinkActive="active" style="text-decoration: none; color: black;"><span  class="name">Najla BenAhmed</span></a>
                     <span class="person-description">Computer science student </span>
                     <span class="person-description"> 25 Nov 2023 at 23:00</span>
                 </div> 
@@ -13,10 +13,10 @@
         <span class="badge badge-pill badge-warning status">Founder</span>
         <div class="card-body pos">
             <div class="text_of_post col-12 mt-2">
-                <p class="font">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <a routerLink='/consultpost' class="text-dark" style="text-decoration: none;"><p class="font">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></a>
             </div>
         <div class="mb-3 ">
-            <img  class="card-img-bottom " src="https://media.istockphoto.com/id/178447404/fr/photo/b%C3%A2timents-daffaires-moderne.jpg?s=612x612&w=0&k=20&c=KDgacnz516dO2YiaMsiyHABoHaBhv5K1CRjHUEbcviQ="alt="image_within_post"/>
+            <a routerLink='/consultpost'><img class="card-img-bottom " src="https://media.istockphoto.com/id/178447404/fr/photo/b%C3%A2timents-daffaires-moderne.jpg?s=612x612&w=0&k=20&c=KDgacnz516dO2YiaMsiyHABoHaBhv5K1CRjHUEbcviQ="alt="image_within_post"/></a>
         </div>
 
         <div class="flexy-2">
@@ -27,4 +27,38 @@
        
        
     </div>
-</div></div>
+</div></div> -->
+
+<div class="container">
+    <div class="card mb-3">
+        <div class="card-body">
+            <div class="flexy">
+                <img  routerLink="" class="img-fluid eclipse"  [src]="post.picture" alt="person/startup_img">
+                <div class="flexy-1">
+                    <span routerLink="" class="name">{{post.person_name}}</span>
+                    <span class="person-description">{{post.person_status}}</span>
+                    <span class="person-description">{{post.post_date}}</span>
+                </div> 
+            </div>
+
+        </div>
+       <!-- <span ngIf="post.status==='founder'" class="badge badge-pill badge-warning status">{{post.status}}</span>
+        <spanngIf="post.status==='co-founder'" class="badge badge-pill badge-warning status1">{{post.status}}</span>-->
+        <span [ngClass]="{'status badge badge-pill badge-warning':post.status==='founder','status1 badge badge-pill badge-warning':post.status==='co-founder'}" >{{post.status}}</span>
+        <div class="card-body pos">
+            <div class="text_of_post col-12 mt-2">
+                <a routerLink='/consultpost' class="text-dark" style="text-decoration:none;"><p class="font">{{post.text_content}}</p></a>
+            </div>
+        <div class="mb-3 ">
+           <a routerLink='/consultpost'> <img  class="card-img-bottom " [src]= "post.media_content"/></a>
+        </div>
+
+        <div class="flexy-2">
+                <button type="button" class="btn btn-success">like</button>
+                <button type="button"  class="btn btn-danger">report</button>
+        </div>
+
+
+
+    </div>
+</div>
