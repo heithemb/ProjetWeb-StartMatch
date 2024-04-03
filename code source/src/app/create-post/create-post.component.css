@@ -36,4 +36,8 @@
 #a li{
     font-size: 15px
 }
-
+@media (width >= 1300px){
+    .butt{
+        margin-left: 27%;
+    }
+}

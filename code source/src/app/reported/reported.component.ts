@@ -1,15 +1,12 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-suggested',
-  templateUrl: './suggested.component.html',
-  styleUrl: './suggested.component.css'
+  selector: 'app-reported',
+  templateUrl: './reported.component.html',
+  styleUrl: './reported.component.css'
 })
-export class SuggestedComponent  {
-  
-
-  suggested:any[]=[
+export class ReportedComponent {
+  reported:any[]=[
     {
       name:"Najla BenAhmed  ",
       image:  "../../assets/images (2).jpg",
@@ -37,14 +34,10 @@ export class SuggestedComponent  {
   ]
 
 
-  
 }
 
 
 
 
-
-
- 
 
 

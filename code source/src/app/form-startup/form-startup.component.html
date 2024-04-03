@@ -1,57 +1,58 @@
 <body>
     <div class="container">
     
-        <div class="form was-validated">
+        <form class="form was-validated">
             <div class="row">
-                <div class="col-sm-12 col-lg-6">
+                <div class="col-md-5 col-lg-4 offset-lg-1">
                     <label for="fname" style="color: rgb(255, 255, 255);"> Name of start-up:</label>
-                    <input required style=" width: 400px; margin-bottom: 35px;" type="text" class="form-control" id="fname" style="background:#ffffff;">
+                    <input required style="  margin-bottom: 35px;" type="text" class="form-control" id="fname" style="background:#ffffff;">
                     </div>
                 
-                <div class="col-sm-12 col-lg-6">
+                <div class="col-md-5  col-lg-4 offset-md-2 offset-lg-1">
                     <label for="phone" style="color: rgb(255, 255, 255);">Phone Number:</label>
                     <input  required style=" width: 400px; margin-bottom: 35px;" type="number" class="form-control" id="phone" style="background:#ffffff;">
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-12 col-lg-6">
+                <div class="col-md-5 col-lg-4 offset-lg-1">
                     <label for="pswd" style="color: rgb(255, 255, 255);">Password:</label>
-                    <input required style=" width: 400px; margin-bottom: 0px;" type="text" class="form-control" id="pswd" style="background:#ffffff;" pattern=".{5,}" >
-                    <div class="invalid-feedback" style="margin-buttom: 32px;">Enter at least 5 caracteres</div>
+                    <input required style=" width: 400px; margin-bottom: 0px;" type="password" class="form-control" id="pswd" style="background:#ffffff;" pattern=".{5,}" >
+                    <div class="invalid-feedback" style=" margin-bottom: 15px;">Enter at least 5 caracteres</div>
                 </div>
-                <div class="col-sm-12 col-lg-6">
+                <div class="col-md-5 col-lg-4  offset-md-2 offset-lg-1">
                     <label for="confirmpsw" style="color: rgb(255, 255, 255);">Confirm Password :</label>
-                    <input required style=" width: 400px; margin-bottom: 35px;" type="text"  pattern=".{5,}" class="form-control" id="confirmpsw" style="background:#ffffff;">
+                    <input required style=" width: 400px; margin-bottom: 15px;" type="password"  pattern=".{5,}" class="form-control" id="confirmpsw" style="background:#ffffff;">
                 </div>
                 
             </div>
     
             <div class="row">
-                <div class="col-sm-12 col-lg-6">
+                <div class="col-md-5 col-lg-4 offset-lg-1">
                     <label for="email" style="color: rgb(255, 255, 255); ">Email:</label>
-                    <input required style=" width: 400px; margin-bottom: 35px; " type="text" class="form-control" id="email" style="background:#ffffff;">
+                    <input required style=" width: 400px; margin-bottom: 35px; " type="email" class="form-control" id="email" style="background:#ffffff;">
                 </div>
-                <div class="col-sm-12 col-lg-6">
-                        <label for="date" style="color: rgb(255, 255, 255);">Date of Creation:</label>
+                <div class="col-md-5 col-lg-4  offset-md-2 offset-lg-1">
+                    <label for="date" style="color: rgb(255, 255, 255);">Date of Creation:</label>
                         <input  required style=" width: 400px; margin-bottom: 35px;" type="date" class="form-control" id="date" style="background:#ffffff;">
                     </div>
                 </div>
                 
                 <div class="row">
-                    <div class="col-sm-12 col-lg-6">
+                    <div class="col-md-5 col-lg-4 offset-lg-1">
                         <label for="address" style="color: rgb(255, 255, 255);">Address:</label>
                         <input  required style=" width: 400px; margin-bottom: 35px;" type="text" class="form-control" id="address" style="background:#ffffff;">
                     </div>
     
     
-                    <div class="col-sm-12 col-lg-6">
-                    <label for="field" style="color: rgb(255, 255, 255);">Field:</label>
+                    <div class="col-md-5 col-lg-4  offset-md-2 offset-lg-1">
+                        <label for="field" style="color: rgb(255, 255, 255);">Field:</label>
                     <input  required style=" width: 400px; margin-bottom: 35px; " type="text" class="form-control" id="field" style="background:#ffffff;">
                 </div>
                 
                 
             </div>
-            <div class="row"><div class="col-sm-12 col-lg-6">
+            <div class="row"> 
+                <div class="col-md-5 col-lg-4 offset-lg-1">
                 <label for="bio" style="color: rgb(255, 255, 255);">Bio :</label>
                 <textarea  style=" width: 400px; margin-bottom: 35px; " type="text" class="form-control" id="bio" style="background:#ffffff;"></textarea>
             </div></div>
@@ -65,16 +66,16 @@
                 </div>
         
                 
-                <button type="submit" id="done" class="btn">Done</button>
+                <button type="click" id="done" class="btn btn-link" (click)="gotonewsfeed">Done</button>
             
             </div>
-                
+        </form>
             </div>
     
             
         
         
-        </div>
+        
     </body>
   
     
