@@ -38,6 +38,8 @@ import { Headerlanding2Component } from './headerlanding2/headerlanding2.compone
 import { PostmanageComponent } from './postmanage/postmanage.component';
 import { UpdatepostComponent } from './updatepost/updatepost.component';
 import { UpdatePostintComponent } from './update-postint/update-postint.component';
+import { ContactusComponent } from './contactus/contactus.component';
+import { Contactus2Component } from './contactus2/contactus2.component';
 
 
 @NgModule({
@@ -77,6 +79,8 @@ import { UpdatePostintComponent } from './update-postint/update-postint.componen
     PostmanageComponent,
     UpdatepostComponent,
     UpdatePostintComponent,
+    ContactusComponent,
+    Contactus2Component,
 
   ],
   imports: [

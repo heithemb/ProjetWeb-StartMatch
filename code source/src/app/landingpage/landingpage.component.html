@@ -1,4 +1,3 @@
-
 <!-- <body style="background-image: url('../../assets/bg_land.png');height: 100vh;background-repeat: no-repeat; 
 background-position: center;
 background-size: cover; position: relative">
@@ -51,14 +50,30 @@ background-size: cover; position: relative">
      style="background-image: url('../../assets/bg_land.png');height: 100vh">
      <app-headerlanding2></app-headerlanding2>
      <br>
-     <div class="row">
+     <div class="row" style="margin-top: 80px;">
+        <div class="col"> 
+            <h1 style="font-weight: bold;font-family:fantasy;color:#06487C; margin-left: 15px;">  Search ,Find ,Invest And Collaborate</h1>
+            <div [class.fade-out-left]="!divVisible" *ngIf="divVisible">
+
+         <p style="color:#06497cb6;margin-left: 15px">  in this platform we are up to facilitate the communication between Investors,Startups and Founders.</p></div>
+         <div [class.fade-out-left]="!divVisible2" *ngIf="divVisible2">
+
+         <p style="color:#06497cb6;margin-left: 15px">  in this platform we are up to facilitate the communication between Investors,Startups and Founders.
+            Technology and business have been both in relationship. Whether to promote for a startup or look for investors, many involved individuals may use technology and networking platform to spread the information in an efficient way and without delay. 
+Individuals that are engaged in this process are :
+<br/>•	Founders , who have an idea and create  businesses around that idea
+<br/>•	Co-founders, who may have been brought on early by the founder because they had skills that the founder lacks.
+<br/>•	Investors ,who play a crucial role in providing funding and support for startups
+<br/>•	The startup itself,after foundation, is being made available for purchase.
+ StartMatch , a plateform dedicated to all actors in enterpreneurship, that can do the match-making between founder,co-founder or founder-investor or investor-startup.
+
+        </p></div>
+
+         <button id="myButt" class="btn" style="background-color:#8CBDB9; margin-top: 50px; margin-left: 60px; height: 40px;"><p style="color: beige;">Learn More</p></button>
+        </div>    
+
         <div class="col">
-            <h1>Search ,Find ,Invest And Collaborate</h1>
-            <p>in this platform we are up to facilitate the communication between Investors,Startups and Founders.</p>
-            <button>more</button>
-        </div>
-        <div class="col">
-            <img src="../../assets/rajel.png" class="float-end">
+            <img src="../../assets/rajel.png" class="float-end" ></div>
         </div>
      </div>
-</div>
+     <app-footer></app-footer>

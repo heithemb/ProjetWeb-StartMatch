@@ -1,0 +1,33 @@
+<div class="bg-image" 
+     style="background-image: url('../../assets/bg_land.png');height: 100vh">
+     <app-header></app-header>
+     <br>
+     <div class="row" style="margin-left: 30px;">
+        <div class="col">
+            <div class="row">
+                <h1>Contact Form :</h1>
+            </div>
+            <form action="">
+                <div class="row">
+                    <div class="col">
+                        <label class="form-label"  for="name">Name :</label >
+                        <input name="name"id="name" type="text" required class="form-control">
+                        <label class="form-label" for="email">Email :</label >
+                        <input name="email"id="email" type="email" required class="form-control">
+                        <label class="form-label"  for="sujet">Subject :</label >
+                        <input name="sujet"id="sujet" type="text" required class="form-control">
+                    </div>
+                    <div class="col">
+                        <label class="form-label"  for="message">Message :</label >
+                        <textarea id="message" class="form-control" name="message" rows="7"></textarea>
+                    </div>
+                </div>
+                <div class="col offset-8 d-grid"><input  value="send" type="submit" class="btn btn-warning btn-block"></div>
+            </form>
+        </div>
+        <div class="col">
+            <img src="../../assets/rajel.png" class="float-end">
+        </div>
+     </div>
+</div>
+<app-footer></app-footer>
