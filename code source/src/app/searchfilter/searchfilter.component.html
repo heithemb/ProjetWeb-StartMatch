@@ -29,7 +29,7 @@
               <li>
                 <div class="dropdown-item">
                   <input
-                    type="checkbox"
+                    type="checkbox" #checkboxes (change)="getSelectedFilters()"
                     class="form-check-input"
                     value="more than 20"
                   />more than 20
@@ -38,7 +38,7 @@
               <li>
                 <div class="dropdown-item">
                   <input
-                    type="checkbox"
+                    type="checkbox" #checkboxes (change)="getSelectedFilters()"
                     class="form-check-input"
                     value="between 5 and 20"
                   />between 5 and 20
@@ -47,7 +47,7 @@
               <li>
                 <div class="dropdown-item">
                   <input
-                    type="checkbox"
+                    type="checkbox" #checkboxes (change)="getSelectedFilters()"
                     class="form-check-input"
                     value="less than 5"
                   />less than 5
@@ -69,7 +69,7 @@
               <li *ngFor="let val of field">
                 <div class="dropdown-item">
                   <input
-                    type="checkbox"
+                    type="checkbox" #checkboxes (change)="getSelectedFilters()"
                     class="form-check-input"
                     [value]="val"
                   />{{val}}
@@ -91,7 +91,7 @@
               <li>
                 <div class="dropdown-item">
                   <input
-                    type="checkbox"
+                    type="checkbox" #checkboxes (change)="getSelectedFilters()"
                     class="form-check-input"
                     value="founder"
                   />founder
@@ -100,7 +100,7 @@
               <li>
                 <div class="dropdown-item">
                   <input
-                    type="checkbox"
+                    type="checkbox" #checkboxes (change)="getSelectedFilters()"
                     class="form-check-input"
                     value="co-founder"
                   />co-founder
@@ -109,7 +109,7 @@
               <li>
                 <div class="dropdown-item">
                   <input
-                    type="checkbox"
+                    type="checkbox" #checkboxes (change)="getSelectedFilters()"
                     class="form-check-input"
                     value="investor"
                   />investor
@@ -129,7 +129,7 @@
             <li>
               <div class="dropdown-item">
                 <input
-                  type="checkbox"
+                  type="checkbox" #checkboxes (change)="getSelectedFilters()"
                   class="form-check-input"
                   value="post"
                 />post
@@ -138,7 +138,7 @@
             <li>
               <div class="dropdown-item">
                 <input
-                  type="checkbox"
+                  type="checkbox" #checkboxes (change)="getSelectedFilters()"
                   class="form-check-input"
                   value="profile"
                 />profile
