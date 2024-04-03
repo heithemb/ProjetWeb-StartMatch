@@ -6,11 +6,11 @@
         <div class="row">
             <div class="col-md-5 col-lg-4 offset-lg-1">
                 <label for="email" style="color: rgb(255, 255, 255); ">Email:</label>
-                <input required style=" width: 400px; margin-bottom: 35px; " type="email" class="form-control" id="email" style="background:#ffffff;">
+                <input required style=" width: 400px; margin-bottom: 35px; " type="email" class="form-control" id="email" style="background:#ffffff;" name="email">
             </div>
             <div class="col-md-5  col-lg-4 offset-md-2 offset-lg-1">
                 <label for="phone" style="color: rgb(255, 255, 255);">Phone number :</label>
-                <input  required style=" width: 400px; margin-bottom: 35px;" type="number" class="form-control" id="phone" style="background:#ffffff;">
+                <input  required style=" width: 400px; margin-bottom: 35px;" type="tel" pattern="[0-9]{8}" class="form-control" id="phone" style="background:#ffffff;" name="phone">
             </div>
             
         </div>
@@ -18,24 +18,24 @@
         <div class="row">
             <div class="col-md-5 col-lg-4 offset-lg-1">
                 <label for="fname" style="color: rgb(255, 255, 255);">First name :</label>
-                <input required style=" width: 400px; margin-bottom: 35px;" type="text" class="form-control" id="fname" style="background:#ffffff;">
+                <input required style=" width: 400px; margin-bottom: 35px;" type="text" class="form-control" id="fname" style="background:#ffffff;" name="fname">
             </div>
 
             <div class="col-md-5  col-lg-4 offset-md-2 offset-lg-1">
                 <label for="lname" style="color: rgb(255, 255, 255);">Last name:</label>
-                <input required style=" width: 400px; margin-bottom: 35px;" type="text" class="form-control" id="lname" style="background:#ffffff;">
+                <input required style=" width: 400px; margin-bottom: 35px;" type="text" class="form-control" id="lname" style="background:#ffffff;" name="lname">
             </div>
             
         </div>
         <div class="row">
             <div class="col-md-5 col-lg-4 offset-lg-1">
                 <label for="pswd" style="color: rgb(255, 255, 255);">Password:</label>
-                <input required style=" width: 400px; margin-bottom: 0px;" type="password" class="form-control" id="pswd" style="background:#ffffff;" pattern=".{5,}" >
+                <input required style=" width: 400px; margin-bottom: 0px;" type="password" class="form-control" id="pswd" style="background:#ffffff;" pattern=".{5,}" name="pswd">
                 <div class="invalid-feedback" style=" margin-bottom: 32px;">Enter at least 5 caracteres</div>
             </div>
             <div class="col-md-5  col-lg-4 offset-md-2 offset-lg-1">
                 <label for="confirmpsw" style="color: rgb(255, 255, 255);">Confirm Password :</label>
-                <input required style=" width: 400px; margin-bottom: 35px;" type="password"  pattern=".{5,}" class="form-control" id="confirmpsw" style="background:#ffffff;">
+                <input required style=" width: 400px; margin-bottom: 35px;" type="password"  pattern=".{5,}" class="form-control" id="confirmpsw" style="background:#ffffff;" name="confirmpsw">
             </div>
             
         </div>
@@ -43,7 +43,7 @@
         <div class="row">
             <div class="col-md-5 col-lg-4 offset-lg-1">
                 <label for="yearExp" style="color: rgb(255, 255, 255);">Year of experience :</label>
-                <select required style=" width: 400px; margin-bottom: 35px;"  class="form-select"   id="yearExp" style="background:#ffffff;">
+                <select required style=" width: 400px; margin-bottom: 35px;"  class="form-select" name="yearExp"  id="yearExp" style="background:#ffffff;">
                     <option disabled selected value=""> </option>
                     <option>-5 years of experience</option>
                 <option>5-10 years of experience</option>
@@ -52,28 +52,28 @@
             </div> 
             <div class="col-md-5  col-lg-4 offset-md-2 offset-lg-1">
                 <label for="birth" style="color: rgb(255, 255, 255);">Date of Birth:</label>
-                <input  required style=" width: 400px; margin-bottom: 35px;" type="date" class="form-control" id="birth" style="background:#ffffff;">
+                <input  required style=" width: 400px; margin-bottom: 35px;" type="date" class="form-control" id="birth" name="birth" style="background:#ffffff;">
             </div>
         </div>
 
         <div class="row">
             <div class="col-md-5 col-lg-4 offset-lg-1">
                 <label for="address" style="color: rgb(255, 255, 255);">Address:</label>
-                <input  required style=" width: 400px; margin-bottom: 35px;" type="text" class="form-control" id="address" style="background:#ffffff;">
+                <input  required style=" width: 400px; margin-bottom: 35px;" type="text" class="form-control" id="address" name="address" style="background:#ffffff;">
             </div>
             <div class="col-md-5  col-lg-4 offset-md-2 offset-lg-1">
                 <label for="field" style="color: rgb(255, 255, 255);">Field:</label>
-                <input  required style=" width: 400px; margin-bottom: 35px; " type="text" class="form-control" id="field" style="background:#ffffff;">
+                <input  required style=" width: 400px; margin-bottom: 35px; " type="text" class="form-control" id="field" name="field" style="background:#ffffff;">
             </div>
         </div>
         <div class="row">
             <div class="col-md-5 col-lg-4 offset-lg-1">
                 <label for="skills" style="color: rgb(255, 255, 255);">Skills:</label>
-                <input  required style=" width: 400px; margin-bottom: 35px;" type="text" class="form-control" id="skills" style="background:#ffffff;">
+                <input  required style=" width: 400px; margin-bottom: 35px;" type="text" class="form-control" name="skills" id="skills" style="background:#ffffff;">
             </div>
             <div class="col-md-5  col-lg-4 offset-md-2 offset-lg-1">
                 <label for="bio" style="color: rgb(255, 255, 255);">Bio :</label>
-                <textarea  style=" width: 400px; margin-bottom: 35px; " type="text" class="form-control" id="bio" style="background:#ffffff;"></textarea>
+                <textarea  style=" width: 400px; margin-bottom: 35px; " type="text" class="form-control" id="bio" name="bio" style="background:#ffffff;"></textarea>
             </div>
         </div>
 

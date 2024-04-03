@@ -15,6 +15,7 @@ import { AdminfirstpannelComponent } from './adminfirstpannel/adminfirstpannel.c
 import { ConsultpostComponent } from './consultpost/consultpost.component';
 import {SigninComponent } from './signin/signin.component';
 import { LoginFormComponent } from './login-form/login-form.component';
+import { UpdatePostintComponent } from './update-postint/update-postint.component';
 const routes: Routes = [
   /*{path:'',redirectTo:'newsfeed', pathMatch: 'full'},*/
   {path:'newsfeed',component:NewsfeedComponent},
@@ -34,6 +35,8 @@ const routes: Routes = [
   {path:'login',component:LoginFormComponent},
   {path:'aboutus',component:AboutUsComponent},
   {path:'adminfirstpannel',component:AdminfirstpannelComponent},
+  {path:'about-us',component:AboutUsComponent},
+  {path:'updatepost',component:UpdatePostintComponent},
   {path:'',redirectTo: 'signin', pathMatch: 'full'},
 ];
 

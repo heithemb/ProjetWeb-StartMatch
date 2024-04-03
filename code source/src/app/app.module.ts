@@ -35,6 +35,10 @@ import { SigninComponent } from './signin/signin.component';
 import { HeaderlandingComponent } from './headerlanding/headerlanding.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { Headerlanding2Component } from './headerlanding2/headerlanding2.component';
+import { PostmanageComponent } from './postmanage/postmanage.component';
+import { UpdatepostComponent } from './updatepost/updatepost.component';
+import { UpdatePostintComponent } from './update-postint/update-postint.component';
+
 
 @NgModule({
   declarations: [
@@ -70,6 +74,10 @@ import { Headerlanding2Component } from './headerlanding2/headerlanding2.compone
     HeaderlandingComponent,
     AboutUsComponent,
     Headerlanding2Component,
+    PostmanageComponent,
+    UpdatepostComponent,
+    UpdatePostintComponent,
+
   ],
   imports: [
     BrowserModule,
