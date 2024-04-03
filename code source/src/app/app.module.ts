@@ -33,6 +33,7 @@ import { UpdateProfileComponent } from './update-profile/update-profile.componen
 import { ConsultpostComponent } from './consultpost/consultpost.component';
 import { SigninComponent } from './signin/signin.component';
 import { HeaderlandingComponent } from './headerlanding/headerlanding.component';
+import { AboutUsComponent } from './about-us/about-us.component';
 
 
 @NgModule({
@@ -67,6 +68,7 @@ import { HeaderlandingComponent } from './headerlanding/headerlanding.component'
     ConsultpostComponent,
     SigninComponent,
     HeaderlandingComponent,
+    AboutUsComponent,
 
   ],
   imports: [

@@ -41,8 +41,19 @@
     color:#D20319;
     background-color: #FFE5E8;
     font-family: 'Inter', sans-serif;
+    text-align: center;
+    width:80px;
+    padding: 5px;
+    border-radius: 20px;
+    font-weight: 500;
+}
+.status1{
+    margin-left: 105px;
+    color:#00692A;
+    background-color: #D8F7E6;
+    font-family: 'Inter', sans-serif;
 
-    width:60px;
+    width:80px;
     padding: 5px;
     border-radius: 20px;
     font-weight: 500;
