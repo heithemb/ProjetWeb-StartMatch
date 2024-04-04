@@ -2,9 +2,9 @@
     <div class="card mb-3">
         <div class="card-body">
             <div class="flexy">
-                <img  routerLink="" class="img-fluid eclipse"  [src]="post.picture" alt="person/startup_img">
+                <a routerLink='/OtherPorfile'><img   class="img-fluid eclipse"  [src]="post.picture" alt="person/startup_img"></a>
                 <div class="flexy-1">
-                    <span routerLink="" class="name">{{post.person_name}}</span>
+                   <a style="color:black ; text-decoration:none; " routerLink='/OtherPorfile'><span  class="name">{{post.person_name}}</span></a>
                     <span class="person-description">{{post.person_status}}</span>
                     <span class="person-description">{{post.post_date}}</span>
                 </div> 

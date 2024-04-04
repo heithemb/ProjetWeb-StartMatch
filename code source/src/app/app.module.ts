@@ -42,6 +42,7 @@ import { ContactusComponent } from './contactus/contactus.component';
 import { Contactus2Component } from './contactus2/contactus2.component';
 import { PrivacyComponent } from './privacy/privacy.component';
 import { HeaderadminComponent } from './headeradmin/headeradmin.component';
+import { Aboutus2Component } from './aboutus2/aboutus2.component';
 
 
 @NgModule({
@@ -85,6 +86,7 @@ import { HeaderadminComponent } from './headeradmin/headeradmin.component';
     Contactus2Component,
     PrivacyComponent,
     HeaderadminComponent,
+    Aboutus2Component,
 
   ],
   imports: [
