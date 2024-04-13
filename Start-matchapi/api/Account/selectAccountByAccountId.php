@@ -3,7 +3,7 @@
 header('Access-Control-Allow-Origin:*');
 header('Content-Type: application/json');
 //initializing api
-include_once('../core/initialize.php');
+include_once('../../core/initialize.php');
 //initializing profil
 $account=new Account($connection);
 $account->idaccount = isset($_GET['idaccount']) ? $_GET['idaccount'] : die();
