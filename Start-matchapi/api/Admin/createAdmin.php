@@ -14,8 +14,18 @@ $profil->password= $data->password;
 //create profil
 if($profil->createProfil()){
     echo json_encode(array('message'=>'Profil created'));
-
+    $admin=new Admin($connection);
+    $admin->name= $data->name;
+    $admin->idadmin=null;
+    $admin->profil_login= $data->login;
+    if($admin->createAdmin()){
+        echo json_encode(array('message'=> 'admin created'));
+    }else{
+        echo json_encode(array('message'=>'admin not created'));
+        $profil->deleteProfil();
+    }
 }else {
     echo json_encode(array('message'=> 'Profil not Created'));
 }
+
 ?>

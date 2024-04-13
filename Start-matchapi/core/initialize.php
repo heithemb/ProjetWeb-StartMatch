@@ -11,4 +11,5 @@
     require_once(CORE_PATH.DS."profil.php");
     require_once(CORE_PATH.DS."account.php");
     require_once(CORE_PATH.DS."newsfeed.php");
+    require_once(CORE_PATH.DS."admin.php");
 ?>
