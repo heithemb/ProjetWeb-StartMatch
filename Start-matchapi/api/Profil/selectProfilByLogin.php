@@ -10,9 +10,13 @@ $profil->login = isset($_GET['login']) ? $_GET['login'] : die();
 //blog post query
 $profil->selectProfilByLogin($profil->login);
 //get the row count
+if($profil->login!=null){
 $profil_arr=array(
     'login'=>$profil->login,
     'password'=>$profil->password
 );
 print_r(json_encode($profil_arr));
+}else{
+    print_r(json_encode(array('message'=> 'no profil found')));
+}
 ?>

@@ -9,10 +9,12 @@ $account=new Account($connection);
 $account->idaccount = isset($_GET['idaccount']) ? $_GET['idaccount'] : die();
 //blog post query
 $account->selectAccountByAccountId($account->idaccount);
-//get the row count
+if($account->idaccount!=null){
 $Account_arr=array(
     'idaccount'=>$account->idaccount,
     'reportsnb'=>$account->reportsnb
 );
 print_r(json_encode($Account_arr));
+}else{
+    print_r(json_encode(array('message'=> 'no account found')));}
 ?>
