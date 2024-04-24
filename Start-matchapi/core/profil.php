@@ -29,6 +29,17 @@ class Profil{
         $this->login = $colLogin;
         $this->password = $colPassword;
     }
+    public function selectProfilByLoginPwd(){
+        $query = 'SELECT * FROM ' . $this->table . ' WHERE Login = ? AND Password = ? LIMIT 1';
+        //prepare statement
+        $stmt = mysqli_prepare($this->conn, $query);
+        mysqli_stmt_bind_param($stmt, "ss", $this->login, $this->password);
+        mysqli_stmt_execute($stmt);
+        mysqli_stmt_bind_result($stmt, $colLogin, $colPassword);
+        mysqli_stmt_fetch($stmt);
+        $this->login = $colLogin;
+        $this->password = $colPassword;
+    }
     public function createProfil(){
         //create querry
         $query = "INSERT INTO ". $this->table . " SET Login = ?, Password = ?";
