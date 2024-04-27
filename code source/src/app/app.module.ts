@@ -4,7 +4,7 @@ import { HttpClientModule,withFetch } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
+import { CommonModule } from '@angular/common';
 
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
@@ -50,6 +50,7 @@ import { Aboutus2Component } from './aboutus2/aboutus2.component';
 
 @NgModule({
   declarations: [
+    
     AppComponent,
     NavbarComponent,
     FooterComponent,
@@ -93,6 +94,7 @@ import { Aboutus2Component } from './aboutus2/aboutus2.component';
 
   ],
   imports: [
+    CommonModule,
     BrowserModule,
     AppRoutingModule,
     FormsModule,

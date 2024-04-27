@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { SharedService } from '../shared.service';
+
 @Component({
   selector: 'app-headernews',
   templateUrl: './headernews.component.html',
@@ -12,6 +13,6 @@ export class HeadernewsComponent {
 
   ngOnInit() {
     this.user = this.sharedService.getUser();
-    console.log(this.user.plast_name)
+    console.log(this.user.plast_name+" "+this.user['sname'])
   }
 }

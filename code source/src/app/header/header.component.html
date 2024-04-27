@@ -9,7 +9,12 @@
             <app-navbar></app-navbar>
         </div>
         <div class="col-md-2 align-items text-center" id="profile-name">
-            <a routerLink='/profile'><h6 >{{ user.pfirst_name }} {{ user.plast_name }}</h6></a>
+            <ng-container *ngIf="user.pfirst_name">
+                <a routerLink='/profile'  ><h6 >{{ user.pfirst_name }} {{ user.plast_name }}</h6></a>
+                </ng-container>
+                <ng-container *ngIf="user.sname">
+                    <a routerLink='/profile'  ><h6 >{{ user.sname }}</h6></a>
+                    </ng-container>
         </div>
         <div class="col-md-1   text-center ">
             <a routerLink='/profile'>

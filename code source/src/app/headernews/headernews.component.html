@@ -9,7 +9,14 @@
             <app-navbarnews></app-navbarnews>
         </div>
         <div class="col-md-2 text-center" id="profile-name" >
+            <div *ngIf="user.pfirst_name">
             <a routerLink='/profile'  ><h6 >{{ user.pfirst_name }} {{ user.plast_name }}</h6></a>
+            </div>
+            
+            <div *ngIf="user.sname">
+
+                <a routerLink='/profile'  ><h6 >{{ user.sname }}</h6></a>
+                </div>
         </div>
         <div class="col-md-1 text-center">
             <a routerLink='/profile'><img src="data:image/jpeg;base64,{{user.ppic}}" height="75" width="81" id="pdp" class="rounded-circle" ></a>

@@ -1,12 +1,16 @@
 import { HttpClient,HttpHeaders } from '@angular/common/http';
+import { SharedService } from './app/shared.service';
 import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
 export class ControllerService {
+  
   private url = 'http://localhost:86/Start-matchapi/api';
-
-  constructor(private http: HttpClient) { }
+  user:any;
+  constructor(private http: HttpClient ,private shared :SharedService) { 
+    
+  }
 
   login(email: string, password: string) {
     const headers = new HttpHeaders({
@@ -17,6 +21,16 @@ export class ControllerService {
       password: password
     };
     return this.http.post(`${this.url}/User/selectUserByLoginPwd.php`, data, { headers });
+  }
+  getPostsByIdUserInProfil(){
+    this.user = this.shared.getUser();
+    return this.http.get(`${this.url}/Post/selectPostByUserIdUser.php?user_iduser=${this.user.idUser}`);
+  }
+  getusers() {
+    return this.http.get(`${this.url}/User/selectAllUser.php`);
+  }
+  getPosts(){
+    return this.http.get(`${this.url}/Post/selectAllPosts.php`);
   }
   get(uri: string){
     return this.http.get(`${this.url}/${uri}`);
