@@ -20,16 +20,18 @@ export class SuggestedComponent implements OnInit {
         if (user.pfirst_name){
         this.suggested.push({
           name: user.pfirst_name + " " + user.plast_name,
-          image: "data:image/jpeg;base64," + user.ppic
+          image: "data:image/jpeg;base64," + user.ppic,
+          id:user.idUser
         });
       }else{
         this.suggested.push({
           name: user.sname,
-          image: "data:image/jpeg;base64," + user.ppic
+          image: "data:image/jpeg;base64," + user.ppic,
+          id:user.idUser
         });
       }
-
       }
+      console.log(this.suggested);
     });
   }
 }

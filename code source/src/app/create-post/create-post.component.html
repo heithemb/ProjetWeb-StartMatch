@@ -1,18 +1,18 @@
 <div class="container">
-    <form>
+    <form [formGroup]="postForm" (ngSubmit)="onSubmit()">
     <div class="create-post-container">
         <div class="user">
         <div class="user-profile">
             <a routerLink="/profile" routerLinkActive="active"><img src="data:image/jpeg;base64,{{user.ppic}}" alt="user-pdp"></a>
         </div>
         <div class="post-input-container">
-            <textarea class="form-control" id="inputText" rows="3"  cols="43" placeholder="What's on your mind" required></textarea>
+            <textarea class="form-control" formControlName="textcontent" id="inputText" rows="3"  cols="43" placeholder="What's on your mind" required></textarea>
 
         </div></div>
         <div class="mediaUploaded"></div>
         <div class="buttons">
         <div class="file-upload">
-            <input type="file" id="fileInput" accept="image/*, video/*" style="display: none;">
+            <input type="file"  id="fileInput" accept="image/*, video/*" formControlName="mediacontent" style="display: none;">
             <label for="fileInput">
                 <img src="../../assets/photo.png" id="iconUpload" alt="Photo/Video" style="width: 20px; height: 20px;"> Photo/Video
             </label>
@@ -22,9 +22,9 @@
                 <img src="../../assets/iconType.png" id="typeIcon" alt="Photo/Video" style="width: 20px; height: 20px;"> Type
             </button>
             <ul class="dropdown-menu">
-                <li><input class="form-check-input" type="checkbox" id="founder" >Founder</li>
-                <li><input class="form-check-input" type="checkbox" id="co-founder">Co-Founder</li>
-                <li><input class="form-check-input" type="checkbox" id="investor">Investor</li> 
+                <li *ngFor="let tag of listtags">
+                    <input class="form-check-input" [formControlName]="tag" type="checkbox" id="{{ tag }}"> {{ tag }}
+                  </li>
             </ul>
                
         </div>
@@ -33,20 +33,13 @@
                 <img src="../../assets/clipboard.png" id="typeIcon" alt="field" style="width: 20px; height: 20px;"> Fields
             </button>
             <ul class="dropdown-menu" id="a">
-               <li><input class="form-check-input" type="checkbox" id="ai" >Artificial Intelligence </li>
-                <li><input class="form-check-input" type="checkbox" id="energy">Renewable Energy</li>
-                <li><input class="form-check-input" type="checkbox" id="cs">Cybersecurity</li> 
-                <li><input class="form-check-input" type="checkbox" id="investor">Cybersecurity</li> 
-                <li><input class="form-check-input" type="checkbox" id="health">Health and Wellness</li> 
-                <li><input class="form-check-input" type="checkbox" id="FinTech">FinTech</li> 
-                <li><input class="form-check-input" type="checkbox" id="education">Online Education</li> 
-                <li><input class="form-check-input" type="checkbox" id="web">Web Development</li> 
-                <li><input class="form-check-input" type="checkbox" id="AgriTech">AgriTech</li> 
-                <li><input class="form-check-input" type="checkbox" id="commerce">E-commerce</li> 
+                <li *ngFor="let field of listfield">
+                    <input class="form-check-input" [formControlName]="field" type="checkbox" id="{{ field }}"> {{ field }}
+                  </li>
             </ul>
                
         </div>
-        <button type="submit" id="btnPost" class="btn btn-primary butt">Post</button>
+        <button type="submit" id="btnPost" (click)="onSubmit" class="btn btn-primary butt">Post</button>
     </div>
 </div> 
 
