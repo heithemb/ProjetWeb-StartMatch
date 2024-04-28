@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="card mb-3">
+        <div class="card-body">
+            <div class="flexy">
+                <img  routerLink='/OtherPorfile' class="img-fluid eclipse"  [src]="post.picture" alt="person/startup_img">
+                <div class="flexy-1">
+                    <span routerLink='/OtherPorfile' class="name">{{post.person_name}}</span>
+                    <span class="person-description">{{post.person_status}}</span>
+                    <span class="person-description">{{post.post_date}}</span>
+                </div> 
+            </div>
+        </div>
+       <!-- <span *ngIf="post.status==='founder'" class="badge badge-pill badge-warning status">{{post.status}}</span>
+        <span *ngIf="post.status==='co-founder'" class="badge badge-pill badge-warning status1">{{post.status}}</span>-->
+        <span [ngClass]="{'status badge badge-pill badge-warning':post.status==='founder','status1 badge badge-pill badge-warning':post.status==='co-founder'}" >{{post.status}}</span>
+        <div class="card-body pos">
+            <div class="text_of_post col-12 mt-2">
+                <a routerLink='/consultpost' class="text-dark" style="text-decoration:none;"><p class="font">{{post.text_content}}</p></a>
+            </div>
+        <div class="mb-3 ">
+           <a routerLink='/consultpost'> <img  class="card-img-bottom " [src]= "post.media_content"/></a>
+        </div>
+
+        <div class="flexy-2">
+                <button type="button" (click)="deletepost(post.idpost)"  class="btn btn-danger">delete</button>
+        </div>
+         
+       
+       
+    </div>
+</div></div>

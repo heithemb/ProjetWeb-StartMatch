@@ -12,6 +12,5 @@ export class HeaderComponent {
 
   ngOnInit() {
     this.user = this.sharedService.getUser();
-    console.log(this.user.plast_name)
   }
 }

@@ -29,9 +29,19 @@ export class LoginFormComponent {
       const email = emailControl.value;
       if (passwordcontrol &&passwordcontrol.value !==null){
       const password = passwordcontrol.value;
-      this.apiService.login(email, password).subscribe((response: any) => {
+      this.apiService.login(email, password,"User/selectUserByLoginPwd.php").subscribe((response: any) => {
         if (response.message) {
-          alert("error in login password combination")
+          this.apiService.login(email, password,"Admin/selectAdminByLoginPwd.php").subscribe((response: any) => {
+            if (response.message) {
+              alert("error in login password combination")
+            } else {
+              // Login successful, share the response with the shared service
+              this.sharedService.setUser(response);
+              this.router.navigate(['/adminfirstpannel']);
+            }
+          }, (error: any) => {
+            console.error(error);
+          });
         } else {
           // Login successful, share the response with the shared service
           this.sharedService.setUser(response);
@@ -39,6 +49,7 @@ export class LoginFormComponent {
         }
       }, (error: any) => {
         console.error(error);
+        
       });
     }
     }

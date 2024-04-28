@@ -5,6 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class SharedService {
   private user: any;
+  private userv:any
   checkedsta:any[]=[];
   checkedtype:any[]=[];
   checkedex:any[]=[];
@@ -17,6 +18,13 @@ export class SharedService {
 
   getUser() {
     return this.user;
+  }
+  setUserv(user: any) {
+    this.userv = user;
+  }
+
+  getUserv() {
+    return this.userv;
   }
   }
 

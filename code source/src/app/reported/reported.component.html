@@ -13,12 +13,12 @@
                   <ul class="list-group list-group-flush cus-bg" >
                     <li *ngFor="let profile of reported" class="list-group-item cus-bg">
                         <div class="row ">                        <div class="col-3 align-items">
-                          <a routerLink='/OtherPorfile' routerLinkActive="active"><img [src]="profile.image" height="45" width="51" id="pdp" class="rounded-circle" ></a>
+                           <img [src]="profile.image" (click)="consult(profile.id)" height="45" width="51" id="pdp" class="rounded-circle" >
                       </div>
                         <div class="col-6 align-items">
-                          <a routerLink='/OtherPorfile' style="text-decoration: none; color: black;"><p  style="margin-top: 11px;" id="profile-name">{{profile.name}}</p></a>
+                          <p (click)="consult(profile.id)" style="text-decoration: none; color: black;" style="margin-top: 11px;" id="profile-name">{{profile.name}}</p>
                         </div><div class="col-3 align-items">
-                          <button type="click" class="btn" style="background-color: rgba(0, 0, 0, 0.715); height:40px;"><p style="color: rgb(239, 195, 195);">Delete</p></button>
+                          <button type="click"(click)="deleteprofile(profile.id)" class="btn" style="background-color: rgba(0, 0, 0, 0.715); height:40px;"><p style="color: rgb(239, 195, 195);">Delete</p></button>
                           </div> 
                       </div>
                     </li>

@@ -20,6 +20,7 @@ import { ContactusComponent } from './contactus/contactus.component';
 import { Contactus2Component } from './contactus2/contactus2.component';
 import { PrivacyComponent } from './privacy/privacy.component';
 import{Aboutus2Component} from './aboutus2/aboutus2.component';
+import { ConsultreportedprofiilComponent } from './consultreportedprofiil/consultreportedprofiil.component';
 const routes: Routes = [
   /*{path:'',redirectTo:'newsfeed', pathMatch: 'full'},*/
   {path:'newsfeed',component:NewsfeedComponent},
@@ -46,6 +47,7 @@ const routes: Routes = [
   {path:'footer',component:FooterComponent},
   {path:'privacy',component:PrivacyComponent},
   {path:'aboutus2',component:Aboutus2Component},
+  {path:'consultreportedprofiil',component:ConsultreportedprofiilComponent},
   {path:'aboutus',redirectTo:'aboutus2',pathMatch:'full'},
   {path:'',redirectTo: 'landingpage', pathMatch: 'full'},
 ];
