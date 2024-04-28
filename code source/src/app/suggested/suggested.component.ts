@@ -1,44 +1,43 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ControllerService } from '../../controller.service';
 
 @Component({
   selector: 'app-suggested',
   templateUrl: './suggested.component.html',
-  styleUrl: './suggested.component.css'
+  styleUrls: ['./suggested.component.css'] // note the 's' in styleUrls
 })
-export class SuggestedComponent  {
-  
+export class SuggestedComponent implements OnInit {
+  users: any;
+  suggested: any[] = []; // initialize the suggested array
 
-  suggested:any[]=[
-    {
-      name:"Najla BenAhmed  ",
-      image:  "../../assets/images (2).jpg",
-    },
-    {
-      name:"Benmoussa Heithem",
-      image:"../../assets/347245498_3570899629797993_7265237523852668848_n.jpg",
-    },
-    {
-      name:"Mezni noor",
-      image:"../../assets/1700506697307.jpg",
-    },
-    {
-      name:"Lucas Martinez",
-      image:"../../assets/homme.jpg",
-    },
-    {
-      name:"Liam Brown",
-      image:"../../assets/homme2.jpg",
-    },
-    {
-      name:"Ava Miller",
-      image:"../../assets/images.jpg",
-    }
-  ]
+  constructor(private controller: ControllerService) {}
 
+  ngOnInit(): void {
+    this.controller.getusers().subscribe(response => {
+      this.users = response;
+      for (let user of this.users.data) {
+        if (user.pfirst_name){
+        this.suggested.push({
+          name: user.pfirst_name + " " + user.plast_name,
+          image: "data:image/jpeg;base64," + user.ppic
+        });
+      }else{
+        this.suggested.push({
+          name: user.sname,
+          image: "data:image/jpeg;base64," + user.ppic
+        });
+      }
 
-  
+      }
+    });
+  }
 }
+  
+
+
+  
+
 
 
 

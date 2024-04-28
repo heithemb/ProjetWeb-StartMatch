@@ -4,33 +4,29 @@
     <div class="row">
     <div class="col offset-2">
         <p id="text1">Login with StartMatch</p></div>
-        <form class="was-validated">
+        <form class="was-validated" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
             <div class="row">
                 <div class="col-sm-9 col-lg-8 offset-2">
                     <label for="login" style="color: rgb(255, 255, 255);">Enter your email address:</label>
-                    <input required  type="text" class="form-control" id="login" style="background:#ffffff;">
+                    <input required formControlName="email" type="text" class="form-control" id="login" style="background:#ffffff;">
                 </div></div>
                 <div class="row">
                     <div class="col-sm-9 col-lg-8 offset-2">
                     <label for="pswd" style="color: rgb(255, 255, 255);">Enter your Password:</label>
-                    <input required  type="text" class="form-control" id="pswd" style="background:#ffffff;" pattern=".{5,}" >
+                    <input required formControlName="password" type="text" class="form-control" id="pswd" style="background:#ffffff;" pattern=".{5,}" >
                  </div></div>
                  
                 <a href=""><p style="color: rgb(227, 109, 54); margin-left: 70%; margin-top: 10px;">Forgot password ?</p></a>
                     <div class="col-sm-9 col-lg-8 offset-2">
                         
-                       <a routerLink='/newsfeed'> <button type="submit" class="btn " style="margin-top: 30px; width:100%; background: #f17928 ;color:white">login</button></a>
+                        <button type="submit" [disabled]="loginForm.invalid" class="btn " (click)="onSubmit" style="margin-top: 30px; width:100%; background: #f17928 ;color:white">login</button>
                 </div>
-
+            
                 <div style="margin-left: 40%; margin-top: 50px;">
                     <p style="color: rgb(209, 209, 209); display: inline;">No account ?</p>
                     <a routerLink='/signin' id="signUp"><p style="color: rgb(227, 109, 54); margin-left: 3px; margin-top: 10px; display: inline;">Sign Up</p></a>
                 </div>
-
-                
-                </form>
-             </div>
-            </div>
+                </form> </div>
 
 
 

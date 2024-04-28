@@ -1,8 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
-
+import { HttpClientModule,withFetch } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { CommonModule } from '@angular/common';
+
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
@@ -43,11 +46,11 @@ import { Contactus2Component } from './contactus2/contactus2.component';
 import { PrivacyComponent } from './privacy/privacy.component';
 import { HeaderadminComponent } from './headeradmin/headeradmin.component';
 import { Aboutus2Component } from './aboutus2/aboutus2.component';
-import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
   declarations: [
+    
     AppComponent,
     NavbarComponent,
     FooterComponent,
@@ -91,10 +94,12 @@ import { HttpClientModule } from '@angular/common/http';
 
   ],
   imports: [
+    CommonModule,
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [
     provideClientHydration()

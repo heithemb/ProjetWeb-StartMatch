@@ -4,22 +4,21 @@
 <div class="container-fluid">
     <div class="row d-flex align-items-center"id="d2">
         <div class="offset-md-5 col-md-2 text-center"id="pdp2">
-            <img src="../../assets/347245498_3570899629797993_7265237523852668848_n.jpg" style="box-shadow:rgb(71, 90, 106) 3px 3px 6px 0px;" height="75" width="81"  class="rounded-circle" >
+            <img src="data:image/jpeg;base64,{{user.ppic}}" style="box-shadow:rgb(71, 90, 106) 3px 3px 6px 0px;" height="75" width="81"  class="rounded-circle" >
         </div>
     </div>
     <div class="row d-flex align-items-center" id="name">
         <div class="offset-md-4 col-md-4 text-center">
             <h4>
-                heithem Benmoussa
+                {{ user.pfirst_name }} {{ user.plast_name }}
             </h4>
         </div>
     </div>
     <div class="row d-flex align-items-center" id="bio">
         <div class="offset-md-4 col-md-4 text-center">
-            <p style="text-align: center;">
-                computer science engineer<br/>
-                I have experience in business and startup founding
-            </p>
+                <div *ngIf="user.bio"style="text-align: center;">
+                    {{user.bio}}
+                </div>
             <app-button-manage></app-button-manage>
         </div>
     </div>

@@ -11,7 +11,12 @@
     
     <div class="col-lg-6 ">
         <app-create-post></app-create-post><br>
-        <app-beta></app-beta>
+        <div></div>
+        <ng-container *ngFor="let post of tab">
+            <app-postmanage [post]="post"></app-postmanage>
+          </ng-container>
+          
+        
     </div>
 </div>
 </div>
