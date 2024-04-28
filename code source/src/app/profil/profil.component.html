@@ -9,9 +9,16 @@
     </div>
     <div class="row d-flex align-items-center" id="name">
         <div class="offset-md-4 col-md-4 text-center">
-            <h4>
-                {{ user.pfirst_name }} {{ user.plast_name }}
-            </h4>
+            <ng-container *ngIf="user.pfirst_name">
+                <h4>
+                    {{ user.pfirst_name }} {{ user.plast_name }}
+                </h4>
+            </ng-container>
+            <ng-container *ngIf="user.sname">
+                <h4>
+                    {{ user.sname }}
+                </h4>
+            </ng-container>
         </div>
     </div>
     <div class="row d-flex align-items-center" id="bio">

@@ -1,10 +1,13 @@
 import { HttpClient,HttpHeaders } from '@angular/common/http';
 import { SharedService } from './app/shared.service';
 import { Injectable } from '@angular/core';
+import { Post } from './app/models/post';
+import { catchError, tap, throwError } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
 export class ControllerService {
+  
   
   private url = 'http://localhost:86/Start-matchapi/api';
   user:any;
@@ -25,6 +28,20 @@ export class ControllerService {
   getPostsByIdUserInProfil(){
     this.user = this.shared.getUser();
     return this.http.get(`${this.url}/Post/selectPostByUserIdUser.php?user_iduser=${this.user.idUser}`);
+  }
+  createPost(postData: any) {
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json'
+    });
+    console.log(JSON.stringify(postData));
+    return this.http.post('http://localhost:86/Start-matchapi/api/Post/createPost.php', postData, { headers })
+    .pipe(
+      tap((response) => console.log(response)),
+      catchError((error) => {
+        console.error(error);
+        return throwError(error);
+      })
+    );
   }
   getusers() {
     return this.http.get(`${this.url}/User/selectAllUser.php`);

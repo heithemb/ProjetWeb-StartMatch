@@ -34,7 +34,7 @@ export class NewsfeedComponent {
           new Post("data:image/jpeg;base64,"+this.users.data[post.user_iduser-1].ppic,this.users.data[post.user_iduser-1].sname,this.users.data[post.user_iduser-1].field,post.dateofcreation,post.tags,post.textcontent),
         )
         }
-    }
+    }console.log(post.user_iduser-1)
     }
     console.log(this.tab);
   }
