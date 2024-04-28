@@ -20,7 +20,7 @@ class Admin{
     return $stmt;
     }
     public function selectAdminByLogin($login){
-        $query = 'SELECT * FROM ' . $this->table . ' WHERE Login = ? LIMIT 1';
+        $query = 'SELECT * FROM ' . $this->table . ' WHERE Profil_Login = ? LIMIT 1';
         //prepare statement
         $stmt = mysqli_prepare($this->conn, $query);
         mysqli_stmt_bind_param($stmt, "s", $login);

@@ -21,17 +21,14 @@ if($account->createAccount()){
         $account->idaccount=$row['idAccount'];
     }
     
-    echo json_encode(array('message'=>'Account created','idAccount'=>$account->idaccount));
     $profil->login= $data->email;
     $profil->password= $data->password;
     //create profil
     if($profil->createProfil()){
-        echo json_encode(array('message'=>'Profil created'));
         $newsfeed->idnewsfeed= null;
         $newsfeed->lastfilter= null;
         //create newsfeed
         if($newsfeed->createNewsFeed()){
-            echo json_encode(array('message'=>'NewsFeed created'));
             $result=$newsfeed->selectAllNewsFeed();
             while($row=mysqli_fetch_array($result)){
             $newsfeed->idnewsfeed=$row['idNewsFeed'];
@@ -62,19 +59,19 @@ if($account->createAccount()){
             }
             //create user   
             if($user->createUser()){
-                echo json_encode(array('message'=>'User created'));
+                print_r( json_encode(array('message'=>'User created')));
 
             }else {
-                echo json_encode(array('message'=> 'User not Created'));
+
             }       
         }else {
-            echo json_encode(array('message'=> 'NewsFeed not Created'));
+
         }
     }else {
-        echo json_encode(array('message'=> 'Profil not Created'));
+
     }
 }else {
-    echo json_encode(array('message'=> 'Account not Created'));
+
 }
 
 ?>

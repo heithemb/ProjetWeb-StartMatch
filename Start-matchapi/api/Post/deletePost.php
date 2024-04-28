@@ -8,8 +8,8 @@ header('Content-Type: application/json');
 include_once('../../core/initialize.php');
 //initializing profil
 $post=new Post($connection);
-$data=json_decode(file_get_contents('php://input'));
-$post->idpost= $data->idpost;
+
+$post->idpost= isset($_GET['idpost']) ? $_GET['idpost'] : die();
 //delete profil
 if($post->deletePost()){
     echo json_encode(array('message'=>'Post deleted'));

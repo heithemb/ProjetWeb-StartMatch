@@ -92,12 +92,10 @@ export class FormPersonComponent {
       ).subscribe((response: any) => {
         if (response.message) {
           // Gérer les erreurs d'inscription ici (par exemple, email déjà utilisé)
-          alert("Erreur: " + response.message);
-        } else {
+          this.router.navigate(['/login']);
+        } 
           // L'inscription a réussi, stocker les informations utilisateur dans le service partagé et rediriger vers une autre page
-          
-          this.router.navigate(['/login-form']); // Rediriger vers la page de tableau de bord après l'inscription
-        }
+        
       }, (error: any) => {
         console.error(error);
       });

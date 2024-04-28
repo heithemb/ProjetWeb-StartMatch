@@ -6,6 +6,6 @@
     define("APP_NAME", "START-MATCH");
 $connection = mysqli_connect(HOSTNAME,USERNAME,PASSWORD,DATABASE);
 if(!$connection){
-    die("connection field");
+    die("connection failed");
 }
 ?>

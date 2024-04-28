@@ -43,10 +43,23 @@ export class ControllerService {
       'Content-Type': 'application/json'
     });
     const data = {
-      login: email,
-      password: password
+      isperson:1,
+      email: email,
+      password: password,
+      bio:bio,
+      phone_num:phone,
+      field:field,
+      ppic:"",
+      cpic:"",
+      address:address,
+      pfirst_name:firstName,
+      plast_name:lastName,
+      pdateofbirth:dateOfBirth,
+      pjobposition:jobPosition,
+      pexpertise:yearOfExperience,
+      pgender:gender,
     };
-    return this.http.post(`${this.url}/User/selectUserByLoginPwd.php`, data, { headers });
+    return this.http.post(`${this.url}/User/createUser.php`, data, { headers });
   }
   getreportedaccounts(){
     return this.http.get(`${this.url}/Account/selectAccountByReportsNb.php?reportsnb=1`);

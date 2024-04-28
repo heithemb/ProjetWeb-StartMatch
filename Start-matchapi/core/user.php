@@ -37,6 +37,20 @@ class User{
     $stmt= mysqli_query( $this->conn, $query );
     return $stmt;
     }
+    public function selectUserByField(){
+        $query ='SELECT
+        *
+        FROM 
+        '.$this->table.'
+        WHERE Field = ?' ;
+        //prepare statement
+        $stmt= mysqli_prepare( $this->conn, $query );
+        mysqli_stmt_bind_param($stmt, "s", $this->field);
+        mysqli_stmt_execute($stmt);
+        $result = mysqli_stmt_get_result($stmt);
+        mysqli_stmt_close($stmt);
+        return $result;
+        }
     public function selectUserByLogin(){
         $query = 'SELECT * FROM ' . $this->table . ' WHERE Profil_Login = ? LIMIT 1';
         //prepare statement
@@ -72,6 +86,36 @@ class User{
         //prepare statement
         $stmt = mysqli_prepare($this->conn, $query);
         mysqli_stmt_bind_param($stmt, "i", $this->iduser);
+        mysqli_stmt_execute($stmt);
+        mysqli_stmt_bind_result($stmt, $colidUser,$colEmail, $colPhone_Num,$colField,$colBio,$colDate, $colAddress,$colPPic,$colCPic,$colPFirst_Name, $colPLast_Name,$colPDateOfBirth,$colPExpertise,$colPJobPosition,$colPGender,$colSDateOfCreation,$colSName,$colIsPerson,$colNewsFeed_idNewsFeed, $colProfil_Login,$colAccount_idAccount);
+        mysqli_stmt_fetch($stmt);
+        $this->iduser = $colidUser;
+        $this->email = $colEmail;
+        $this->phone_num=$colPhone_Num;
+        $this->field = $colField;
+        $this->bio = $colBio;
+        $this->date=$colDate;
+        $this->address = $colAddress;
+        $this->ppic = $colPPic;
+        $this->cpic=$colCPic;
+        $this->pfirst_name = $colPFirst_Name;
+        $this->plast_name = $colPLast_Name;
+        $this->pdateofbirth= $colPDateOfBirth;
+        $this->pexpertise=$colPExpertise;
+        $this->pjobposition=$colPJobPosition;
+        $this->pgender=$colPGender;
+        $this->sdateofcreation=$colSDateOfCreation;
+        $this->sname= $colSName;
+        $this->isperson=$colIsPerson;
+        $this->newsfeed_idnewsfeed=$colNewsFeed_idNewsFeed;
+        $this->profil_login=$colProfil_Login;
+        $this->account_idaccount=$colAccount_idAccount;
+    }
+    public function selectUserByIdAccount(){
+        $query = 'SELECT * FROM ' . $this->table . ' WHERE Account_idAccount = ? LIMIT 1';
+        //prepare statement
+        $stmt = mysqli_prepare($this->conn, $query);
+        mysqli_stmt_bind_param($stmt, "i", $this->account_idaccount);
         mysqli_stmt_execute($stmt);
         mysqli_stmt_bind_result($stmt, $colidUser,$colEmail, $colPhone_Num,$colField,$colBio,$colDate, $colAddress,$colPPic,$colCPic,$colPFirst_Name, $colPLast_Name,$colPDateOfBirth,$colPExpertise,$colPJobPosition,$colPGender,$colSDateOfCreation,$colSName,$colIsPerson,$colNewsFeed_idNewsFeed, $colProfil_Login,$colAccount_idAccount);
         mysqli_stmt_fetch($stmt);

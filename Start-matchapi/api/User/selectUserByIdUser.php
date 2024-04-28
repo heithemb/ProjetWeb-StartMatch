@@ -11,7 +11,8 @@ $user->iduser = isset($_GET['iduser']) ? $_GET['iduser'] : die();
 $user->selectUserByIdUser();
 //get the row count
 if ($user->iduser!=null){
-$person_arr=array(
+    if ($user->isperson==1){
+    $person_arr=array(
     'idUser'=>$user->iduser,
     'email'=>$user->email,
     'phone_num'=>$user->phone_num,
@@ -29,10 +30,10 @@ $person_arr=array(
     'pgender'=>$user->pgender,
     'newsfeed_idnewsfeed'=>$user->newsfeed_idnewsfeed,
     'profil_login'=>$user->profil_login,
-    'acccount_idaccount'=>$user->account_idaccount
-);
-print_r(json_encode($person_arr));
-$startup_arr=array(
+    'acccount_idaccount'=>$user->account_idaccount);
+    print_r(json_encode($person_arr));
+    }else{
+    $startup_arr=array(
     'idUser'=>$user->iduser,
     'email'=>$user->email,
     'phone_num'=>$user->phone_num,
@@ -46,8 +47,9 @@ $startup_arr=array(
     'sname'=>$user->sname,
     'newsfeed_idnewsfeed'=>$user->newsfeed_idnewsfeed,
     'profil_login'=>$user->profil_login,
-    'acccount_idaccount'=>$user->account_idaccount
-);
+    'acccount_idaccount'=>$user->account_idaccount);
+        print_r(json_encode($startup_arr));
+}
 }else{
     print_r(json_encode(array('message'=>'no user found')));
 }
