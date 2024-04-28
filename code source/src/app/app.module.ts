@@ -43,6 +43,7 @@ import { Contactus2Component } from './contactus2/contactus2.component';
 import { PrivacyComponent } from './privacy/privacy.component';
 import { HeaderadminComponent } from './headeradmin/headeradmin.component';
 import { Aboutus2Component } from './aboutus2/aboutus2.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -92,7 +93,8 @@ import { Aboutus2Component } from './aboutus2/aboutus2.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [
     provideClientHydration()
