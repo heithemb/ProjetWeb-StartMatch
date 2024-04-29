@@ -1,33 +1,30 @@
 <?php
 //headers
-header("Access-Control-Allow-Origin: *");
-header("Access-Control-Allow-Methods: POST, GET, OPTIONS");
+header('Access-Control-Allow-Origin:*');
 header('Content-Type: application/json');
 //initializing api
 include_once('../../core/initialize.php');
-//initializing account
+//initializing profil
 $post=new Post($connection);
 //blog post query
-$result = $post->selectAllPosts();
-
+$result=$post->selectPostByNbReports();
 //get the row count
+
 $n=$result->num_rows;
 if($n> 0){
     $post_arr = array(); 
     $post_arr['data']=array();
     while($row = mysqli_fetch_assoc($result)){
-        
     extract($row);
-    
     $post_item= array(
         'idpost' => $idPost,
         'dateofcreation'=>$DateOfCreation,
         'savesnb' => $SavesNb,
         'reactnb' => $ReactNb,
         'reportnb' => $ReportNb,
-        'tags' => $Tags,
+        'tags' =>  $Tags,
         'mediacontent' => base64_encode($MediaContent),
-        'field'=>$Field,
+        'field'=> $Field,
         'textcontent'=>$TextContent,
         'user_iduser'=>$User_idUser
     );

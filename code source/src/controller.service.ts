@@ -3,6 +3,7 @@ import { SharedService } from './app/shared.service';
 import { Injectable } from '@angular/core';
 import { Post } from './app/models/post';
 import { catchError, tap, throwError } from 'rxjs';
+import { AnyCnameRecord } from 'dns';
 @Injectable({
   providedIn: 'root'
 })
@@ -15,7 +16,7 @@ export class ControllerService {
     
   }
 
-  login(email: string, password: string) {
+  login(email: string, password: string,uri:string) {
     const headers = new HttpHeaders({
       'Content-Type': 'application/json'
     });
@@ -23,11 +24,52 @@ export class ControllerService {
       login: email,
       password: password
     };
-    return this.http.post(`${this.url}/User/selectUserByLoginPwd.php`, data, { headers });
+    return this.http.post(`${this.url}/${uri}`, data, { headers });
   }
-  getPostsByIdUserInProfil(){
-    this.user = this.shared.getUser();
-    return this.http.get(`${this.url}/Post/selectPostByUserIdUser.php?user_iduser=${this.user.idUser}`);
+  signup(email: string,
+    password: string,
+    phone: any,
+    firstName: string,
+    lastName: string,
+    yearOfExperience: any,
+    dateOfBirth: Date,
+    address: string,
+    field: string,
+    skills: string,
+    bio: string,
+    gender: string,
+    jobPosition: string){
+      const headers = new HttpHeaders({
+      'Content-Type': 'application/json'
+    });
+    const data = {
+      isperson:1,
+      email: email,
+      password: password,
+      bio:bio,
+      phone_num:phone,
+      field:field,
+      ppic:"",
+      cpic:"",
+      address:address,
+      pfirst_name:firstName,
+      plast_name:lastName,
+      pdateofbirth:dateOfBirth,
+      pjobposition:jobPosition,
+      pexpertise:yearOfExperience,
+      pgender:gender,
+    };
+    return this.http.post(`${this.url}/User/createUser.php`, data, { headers });
+  }
+  getreportedaccounts(){
+    return this.http.get(`${this.url}/Account/selectAccountByReportsNb.php?reportsnb=1`);
+  }
+  getuserbyidaccount(id:any){
+    return this.http.get(`${this.url}/User/selectUserByIdAccount.php?idaccount=${id}`);
+  
+  }
+  getPostsByIdUserInProfil(id:any){
+    return this.http.get(`${this.url}/Post/selectPostByUserIdUser.php?user_iduser=${id}`);
   }
   createPost(postData: any) {
     const headers = new HttpHeaders({
@@ -43,6 +85,7 @@ export class ControllerService {
       })
     );
   }
+  
   getusers() {
     return this.http.get(`${this.url}/User/selectAllUser.php`);
   }
@@ -59,6 +102,6 @@ export class ControllerService {
     return this.http.patch(`${this.url}/${uri}`,payload);
   }
   delete(uri: string){
-    return this.http.delete(`${this.url}/${uri}`);
+    return this.http.delete(`${this.url}/${uri}`,);
   }
 }

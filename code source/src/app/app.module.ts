@@ -46,6 +46,8 @@ import { Contactus2Component } from './contactus2/contactus2.component';
 import { PrivacyComponent } from './privacy/privacy.component';
 import { HeaderadminComponent } from './headeradmin/headeradmin.component';
 import { Aboutus2Component } from './aboutus2/aboutus2.component';
+import { ReportedpostmanageComponent } from './reportedpostmanage/reportedpostmanage.component';
+import { ConsultreportedprofiilComponent } from './consultreportedprofiil/consultreportedprofiil.component';
 
 
 @NgModule({
@@ -91,6 +93,8 @@ import { Aboutus2Component } from './aboutus2/aboutus2.component';
     PrivacyComponent,
     HeaderadminComponent,
     Aboutus2Component,
+    ReportedpostmanageComponent,
+    ConsultreportedprofiilComponent,
 
   ],
   imports: [

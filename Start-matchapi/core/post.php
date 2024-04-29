@@ -121,6 +121,15 @@ class Post{
         mysqli_stmt_close($stmt);
         return $result;
     }
+    public function selectPostByNbReports(){
+        $query ='SELECT * FROM ' . $this->table . ' WHERE ReportNb > 0';
+        //prepare statement
+        $stmt = mysqli_prepare($this->conn, $query);
+        mysqli_stmt_execute($stmt);
+        $result = mysqli_stmt_get_result($stmt);
+        mysqli_stmt_close($stmt);
+        return $result;
+    }
     public function createPost(){
         //create querry
         $query = "INSERT INTO ". $this->table . " SET  DateOfCreation= ? , SavesNb = 0 ,ReactNb = 0 ,ReportNb = 0 , Tags = ? ,MediaContent = ? ,Field = ? ,TextContent = ? ,User_iduser = ? ";
@@ -173,6 +182,22 @@ class Post{
         $this->idpost = htmlspecialchars(strip_tags($this->idpost));
         //binding of parameters
         $stmt->bind_param("i", $this->idpost);
+        if($stmt->execute()){
+            return true;
+        }
+        //eror mesg
+        printf("Error %s. \n",$stmt->error);
+        return false;
+    }
+    public function deleteAllPost(){
+        //create querry
+        $query = "DELETE FROM " . $this->table . " WHERE User_idUser= ?";
+        //prepare statement
+        $stmt = $this->conn->prepare($query);
+        //clean data
+        $this->user_iduser = htmlspecialchars(strip_tags($this->user_iduser));
+        //binding of parameters
+        $stmt->bind_param("i", $this->user_iduser);
         if($stmt->execute()){
             return true;
         }

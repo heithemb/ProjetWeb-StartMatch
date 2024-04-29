@@ -15,6 +15,7 @@ if($n> 0){
     $newsfeed_arr['data']=array();
     while($row = mysqli_fetch_assoc($result)){
     extract($row);
+    
     $newsfeed_item= array(
         'idnewsfeed' => $idNewsFeed,
         'lastfilter' => $LastFilter

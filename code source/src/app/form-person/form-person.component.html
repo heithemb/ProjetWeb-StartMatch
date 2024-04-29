@@ -2,15 +2,15 @@
 <body>
 <div class="container">
 
-    <form class="form was-validated">
+    <form class="form was-validated" [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
         <div class="row">
             <div class="col-md-5 col-lg-4 offset-lg-1">
                 <label for="email" style="color: rgb(255, 255, 255); ">Email:</label>
-                <input required style=" width: 400px; margin-bottom: 35px; " type="email" class="form-control" id="email" style="background:#ffffff;" name="email">
+                <input required style=" width: 400px; margin-bottom: 35px; " type="email" class="form-control" id="email" style="background:#ffffff;" formControlName="email">
             </div>
             <div class="col-md-5  col-lg-4 offset-md-2 offset-lg-1">
                 <label for="phone" style="color: rgb(255, 255, 255);">Phone number :</label>
-                <input  required style=" width: 400px; margin-bottom: 35px;" type="tel" pattern="[0-9]{8}" class="form-control" id="phone" style="background:#ffffff;" name="phone">
+                <input  required style=" width: 400px; margin-bottom: 35px;" type="tel" pattern="[0-9]{8}" class="form-control" id="phone" style="background:#ffffff;" formControlName="phone">
             </div>
             
         </div>
@@ -18,24 +18,24 @@
         <div class="row">
             <div class="col-md-5 col-lg-4 offset-lg-1">
                 <label for="fname" style="color: rgb(255, 255, 255);">First name :</label>
-                <input required style=" width: 400px; margin-bottom: 35px;" type="text" class="form-control" id="fname" style="background:#ffffff;" name="fname">
+                <input required style=" width: 400px; margin-bottom: 35px;" type="text" class="form-control" id="fname" style="background:#ffffff;" formControlName="firstName">
             </div>
 
             <div class="col-md-5  col-lg-4 offset-md-2 offset-lg-1">
                 <label for="lname" style="color: rgb(255, 255, 255);">Last name:</label>
-                <input required style=" width: 400px; margin-bottom: 35px;" type="text" class="form-control" id="lname" style="background:#ffffff;" name="lname">
+                <input required style=" width: 400px; margin-bottom: 35px;" type="text" class="form-control" id="lname" style="background:#ffffff;" formControlName="lastName">
             </div>
             
         </div>
         <div class="row">
             <div class="col-md-5 col-lg-4 offset-lg-1">
                 <label for="pswd" style="color: rgb(255, 255, 255);">Password:</label>
-                <input required style=" width: 400px; margin-bottom: 0px;" type="password" class="form-control" id="pswd" style="background:#ffffff;" pattern=".{5,}" name="pswd">
+                <input required style=" width: 400px; margin-bottom: 0px;" type="password" class="form-control" id="pswd" style="background:#ffffff;" pattern=".{5,}" formControlName="password">
                 <div class="invalid-feedback" style=" margin-bottom: 32px;">Enter at least 5 caracteres</div>
             </div>
             <div class="col-md-5  col-lg-4 offset-md-2 offset-lg-1">
                 <label for="confirmpsw" style="color: rgb(255, 255, 255);">Confirm Password :</label>
-                <input required style=" width: 400px; margin-bottom: 35px;" type="password"  pattern=".{5,}" class="form-control" id="confirmpsw" style="background:#ffffff;" name="confirmpsw">
+                <input required style=" width: 400px; margin-bottom: 35px;" type="password"  pattern=".{5,}" class="form-control" id="confirmpsw" style="background:#ffffff;" formControlName="confirmPassword">
             </div>
             
         </div>
@@ -43,7 +43,7 @@
         <div class="row">
             <div class="col-md-5 col-lg-4 offset-lg-1">
                 <label for="yearExp" style="color: rgb(255, 255, 255);">Year of experience :</label>
-                <select required style=" width: 400px; margin-bottom: 35px;"  class="form-select" name="yearExp"  id="yearExp" style="background:#ffffff;">
+                <select required style=" width: 400px; margin-bottom: 35px;"  class="form-select" formControlName="yearOfExperience"  id="yearExp" style="background:#ffffff;">
                     <option disabled selected value=""> </option>
                     <option>-5 years of experience</option>
                 <option>5-10 years of experience</option>
@@ -52,28 +52,28 @@
             </div> 
             <div class="col-md-5  col-lg-4 offset-md-2 offset-lg-1">
                 <label for="birth" style="color: rgb(255, 255, 255);">Date of Birth:</label>
-                <input  required style=" width: 400px; margin-bottom: 35px;" type="date" class="form-control" id="birth" name="birth" style="background:#ffffff;">
+                <input  required style=" width: 400px; margin-bottom: 35px;" type="date" class="form-control" id="birth" formControlName="dateOfBirth" style="background:#ffffff;">
             </div>
         </div>
 
         <div class="row">
             <div class="col-md-5 col-lg-4 offset-lg-1">
                 <label for="address" style="color: rgb(255, 255, 255);">Address:</label>
-                <input  required style=" width: 400px; margin-bottom: 35px;" type="text" class="form-control" id="address" name="address" style="background:#ffffff;">
+                <input  required style=" width: 400px; margin-bottom: 35px;" type="text" class="form-control" id="address" formControlName="address" style="background:#ffffff;">
             </div>
             <div class="col-md-5  col-lg-4 offset-md-2 offset-lg-1">
                 <label for="field" style="color: rgb(255, 255, 255);">Field:</label>
-                <input  required style=" width: 400px; margin-bottom: 35px; " type="text" class="form-control" id="field" name="field" style="background:#ffffff;">
+                <input  required style=" width: 400px; margin-bottom: 35px; " type="text" class="form-control" id="field" formControlName="field" style="background:#ffffff;">
             </div>
         </div>
         <div class="row">
             <div class="col-md-5 col-lg-4 offset-lg-1">
                 <label for="skills" style="color: rgb(255, 255, 255);">Skills:</label>
-                <input  required style=" width: 400px; margin-bottom: 35px;" type="text" class="form-control" name="skills" id="skills" style="background:#ffffff;">
+                <input  required style=" width: 400px; margin-bottom: 35px;" type="text" class="form-control" formControlName="skills" id="skills" style="background:#ffffff;">
             </div>
             <div class="col-md-5  col-lg-4 offset-md-2 offset-lg-1">
                 <label for="bio" style="color: rgb(255, 255, 255);">Bio :</label>
-                <textarea  style=" width: 400px; margin-bottom: 35px; " type="text" class="form-control" id="bio" name="bio" style="background:#ffffff;"></textarea>
+                <textarea  style=" width: 400px; margin-bottom: 35px; " type="text" class="form-control" id="bio" formControlName="bio" style="background:#ffffff;"></textarea>
             </div>
         </div>
 
@@ -81,17 +81,17 @@
             <div class="col-md-5 col-lg-4 offset-lg-1">
                 <p id="gender" style="color: rgb(255, 255, 255);">Gender:</p>
                 <div class="form-check form-check-inline">
-                    <input  required type="radio" class="form-check-input" id="male" name="gender" style="margin-bottom: 30px;" value="male">
+                    <input  required type="radio" class="form-check-input" id="male" formControlName="gender" style="margin-bottom: 30px;" value="h">
                     <label class="form-check-label" for="male" style="color: #ffffff;">Male</label>
                 </div>
                 <div class="form-check form-check-inline">
-                    <input required type="radio" class="form-check-input" id="female" name="gender"  value="female">
+                    <input required type="radio" class="form-check-input" id="female" formControlName="gender"  value="f">
                     <label class="form-check-label" for="female" style="color: #ffffff;">Female</label>
                 </div>
             </div>
             <div class="col-md-5  col-lg-4 offset-md-2 offset-lg-1">
                 <label for="job" style="color: rgb(255, 255, 255);">Job Position:</label>
-                <input required style=" width: 400px;" type="text" class="form-control" id="job" style="background:#ffffff;">
+                <input required style=" width: 400px;" type="text" class="form-control" id="job" formControlName="jobPosition" style="background:#ffffff;">
             </div>
         </div>
     
@@ -103,7 +103,7 @@
             </div>
         </div>
 
-        <button type="click" id="done" class="btn" ><a routerLink='/newsfeed'>Done</a></button>
+        <button type="submit" id="done" class="btn" ><a routerLink='/newsfeed'>Done</a></button>
     </div>
 
     </form>

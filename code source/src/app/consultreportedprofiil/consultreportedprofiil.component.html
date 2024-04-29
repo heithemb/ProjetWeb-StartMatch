@@ -1,0 +1,48 @@
+<body>
+    
+
+    <div class="container-fluid">
+        <app-headeradmin></app-headeradmin>
+        <div class="container-fluid">
+            <div class="row d-flex align-items-center"id="d2">
+                <div class="offset-md-5 col-md-2 text-center"id="pdp2">
+                    <img src="data:image/jpeg;base64,{{userv.ppic}}" style="box-shadow:rgb(71, 90, 106) 3px 3px 6px 0px;" height="75" width="81"  class="rounded-circle" >
+                </div>
+            </div>
+            <div class="row d-flex align-items-center" id="name">
+                <div class="offset-md-4 col-md-4 text-center">
+                    <ng-container *ngIf="userv.pfirst_name">
+                        <h4>
+                            {{ userv.pfirst_name }} {{ userv.plast_name }}
+                        </h4>
+                    </ng-container>
+                    <ng-container *ngIf="userv.sname">
+                        <h4>
+                            {{ userv.sname }}
+                        </h4>
+                    </ng-container>
+                </div>
+            </div>
+            <div class="row d-flex align-items-center" id="bio">
+                <div class="offset-md-4 col-md-4 text-center">
+                   
+                        <div *ngIf="userv.bio"style="text-align: center;">
+                            {{userv.bio}}
+                        </div>
+                    
+                    <button type="click" id="report" class="btn btn-danger">delete profile</button>
+    
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-md-6 offset-md-3">
+                    <div class="row">
+                        <ng-container *ngFor="let post of tab">
+                            <app-postmanage [post]="post"></app-postmanage>
+                          </ng-container>
+                    </div>
+                </div></div>
+            </div>
+        </div>
+    </body>
+    

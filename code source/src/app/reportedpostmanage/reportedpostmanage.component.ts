@@ -1,12 +1,14 @@
 import { Component,Input } from '@angular/core';
 import { Post } from '../models/post';
+import { ControllerService } from '../../controller.service';
 
 @Component({
-  selector: 'app-updatepost',
-  templateUrl: './updatepost.component.html',
-  styleUrl: './updatepost.component.css'
+  selector: 'app-reportedpostmanage',
+  templateUrl: './reportedpostmanage.component.html',
+  styleUrl: './reportedpostmanage.component.css'
 })
-export class UpdatepostComponent {
+export class ReportedpostmanageComponent {
+
   @Input() post:Post=
   {
     picture:"https://hackspirit.com/wp-content/uploads/2021/06/Copy-of-Rustic-Female-Teen-Magazine-Cover.jpg",
@@ -18,7 +20,15 @@ export class UpdatepostComponent {
     media_content:"https://media.istockphoto.com/id/1346944001/photo/close-up-of-co-workers-stacking-their-hands-together.jpg?s=612x612&w=0&k=20&c=lidJcFUSR3rkMt4B0yoNwH55lz3sth9o2280keqBXGE=",
     idpost:-1
   }
-   constructor(){
+   constructor(private controller:ControllerService){
 
    }
+   deletepost(id: number) {
+    this.controller.delete("/Post/deletePost.php?idpost="+id).subscribe(response => {
+      console.log(response);
+    },(error: any) => {
+      // If the response generates an error, the user is not found
+      console.log('postd elete failed:', error);
+    });
+    }
 }

@@ -1,0 +1,26 @@
+body{
+    background-image: url("../../assets/ba.png");
+    background-repeat: no-repeat; 
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+#pdp2{
+    
+    padding-top:160px;
+}
+#d2{
+    background-image: url("../../assets/c43d74556254ef9437f091ae018a300d.png");
+    background-repeat: no-repeat;
+    background-size:cover;
+    height: 200px;
+    
+}
+#bio{
+    color: grey;
+     
+}
+#name{
+    padding-top:40px;
+
+}
