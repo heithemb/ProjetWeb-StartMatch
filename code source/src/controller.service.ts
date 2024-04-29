@@ -16,32 +16,6 @@ export class ControllerService {
     
   }
 
-  signupS(email: string,
-    password: string,
-    phone: any,
-    name: string,
-    date: Date,
-    address: string,
-    field: string,
-    bio: string,){
-      const headers = new HttpHeaders({
-      'Content-Type': 'application/json'
-    });
-    const data = {
-      isperson:0,
-      email: email,
-      password: password,
-      bio:bio,
-      phone_num:phone,
-      field:field,
-      ppic:"",
-      cpic:"",
-      address:address,
-      sname:name,
-      sdateofcreation:date,
-    };
-    return this.http.post(`${this.url}/User/createUser.php`, data, { headers });
-  }
   login(email: string, password: string,uri:string) {
     const headers = new HttpHeaders({
       'Content-Type': 'application/json'
@@ -52,7 +26,6 @@ export class ControllerService {
     };
     return this.http.post(`${this.url}/${uri}`, data, { headers });
   }
-  
   signup(email: string,
     password: string,
     phone: any,
@@ -88,6 +61,43 @@ export class ControllerService {
     };
     return this.http.post(`${this.url}/User/createUser.php`, data, { headers });
   }
+  signupS(email: string,
+    password: string,
+    phone: any,
+    name: string,
+    date: Date,
+    address: string,
+    field: string,
+    bio: string,){
+      const headers = new HttpHeaders({
+      'Content-Type': 'application/json'
+    });
+    const data = {
+      isperson:0,
+      email: email,
+      password: password,
+      bio:bio,
+      phone_num:phone,
+      field:field,
+      ppic:"",
+      cpic:"",
+      address:address,
+      sname:name,
+      sdateofcreation:date,
+    };
+    return this.http.post(`${this.url}/User/createUser.php`, data, { headers });
+  }
+  updatePost(idpost:any
+    ,textcontent:string){
+      const data_post={
+      idpost:idpost,
+      textcontent:textcontent
+      }
+      const headers = new HttpHeaders({
+        'Content-Type': 'application/json'
+      });
+      return this.http.put(`${this.url}/Post/updatePosttext.php`,data_post,{headers});
+    }
   getreportedaccounts(){
     return this.http.get(`${this.url}/Account/selectAccountByReportsNb.php?reportsnb=1`);
   }
@@ -112,8 +122,8 @@ export class ControllerService {
       })
     );
   }
-  deleteUser(id:any){
-    return this.http.get(`${this.url}/User/deleteUser.php?iduser=${id}`);
+  getPostById(idPost:string){
+    return this.http.get(`${this.url}/Post/selectPostByIdPost.php?idpost=${idPost}`);
   }
   getusers() {
     return this.http.get(`${this.url}/User/selectAllUser.php`);

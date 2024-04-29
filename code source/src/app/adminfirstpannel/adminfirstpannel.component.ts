@@ -21,17 +21,17 @@ export class AdminfirstpannelComponent {
       if (post.mediacontent){
         if(this.users.data[post.user_iduser-1].pfirst_name){
       this.tab.push(
-      new Post("data:image/jpeg;base64,"+this.users.data[post.user_iduser-1].ppic,this.users.data[post.user_iduser-1].pfirst_name+" "+this.users.data[post.user_iduser-1].plast_name,this.users.data[post.user_iduser-1].field,post.dateofcreation,post.tags,post.textcontent,post.idpost,"data:image/jpeg;base64,"+post.mediacontent),
+      new Post("data:image/jpeg;base64,"+this.users.data[post.user_iduser-1].ppic,this.users.data[post.user_iduser-1].pfirst_name+" "+this.users.data[post.user_iduser-1].plast_name,this.users.data[post.user_iduser-1].field,post.dateofcreation,post.tags,post.textcontent,post.idpost,post.User_idUser,"data:image/jpeg;base64,"+post.mediacontent),
       )}else{this.tab.push(
-        new Post("data:image/jpeg;base64,"+this.users.data[post.user_iduser-1].ppic,this.users.data[post.user_iduser-1].sname,this.users.data[post.user_iduser-1].field,post.dateofcreation,post.tags,post.textcontent,post.idpost,"data:image/jpeg;base64,"+post.mediacontent),
+        new Post("data:image/jpeg;base64,"+this.users.data[post.user_iduser-1].ppic,this.users.data[post.user_iduser-1].sname,this.users.data[post.user_iduser-1].field,post.dateofcreation,post.tags,post.textcontent,post.idpost,post.User_idUser,"data:image/jpeg;base64,"+post.mediacontent),
       )
       }
     }else{
       if(this.users.data[post.user_iduser-1].pfirst_name){
         this.tab.push(
-        new Post("data:image/jpeg;base64,"+this.users.data[post.user_iduser-1].ppic,this.users.data[post.user_iduser-1].pfirst_name+" "+this.users.data[post.user_iduser-1].plast_name,this.users.data[post.user_iduser-1].field,post.dateofcreation,post.tags,post.textcontent,post.idpost),
+        new Post("data:image/jpeg;base64,"+this.users.data[post.user_iduser-1].ppic,this.users.data[post.user_iduser-1].pfirst_name+" "+this.users.data[post.user_iduser-1].plast_name,this.users.data[post.user_iduser-1].field,post.dateofcreation,post.tags,post.textcontent,post.idpost,post.User_idUser),
         )}else{this.tab.push(
-          new Post("data:image/jpeg;base64,"+this.users.data[post.user_iduser-1].ppic,this.users.data[post.user_iduser-1].sname,this.users.data[post.user_iduser-1].field,post.dateofcreation,post.tags,post.textcontent,post.idpost),
+          new Post("data:image/jpeg;base64,"+this.users.data[post.user_iduser-1].ppic,this.users.data[post.user_iduser-1].sname,this.users.data[post.user_iduser-1].field,post.dateofcreation,post.tags,post.textcontent,post.idpost,post.User_idUser,),
         )
         }
     }console.log(post.user_iduser-1)

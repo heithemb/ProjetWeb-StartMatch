@@ -27,6 +27,7 @@ class Post{
     $stmt= mysqli_query( $this->conn, $query );
     return $stmt;
     }
+    
     public function selectPostByIdPost(){
         $query = 'SELECT * FROM ' . $this->table . ' WHERE idPost = ? LIMIT 1';
         //prepare statement
@@ -47,11 +48,21 @@ class Post{
         $this->field= $colField;
 
     }
+    
     public function selectPostByField(){
         $query ='SELECT * FROM ' . $this->table . ' WHERE Field like ?';
         //prepare statement
         $stmt = mysqli_prepare($this->conn, $query);
         mysqli_stmt_bind_param($stmt, "s", $this->field);
+        mysqli_stmt_execute($stmt);
+        $result = mysqli_stmt_get_result($stmt);
+        mysqli_stmt_close($stmt);
+        return $result;
+    }
+    public function selectPostByNbReports(){
+        $query ='SELECT * FROM ' . $this->table . ' WHERE ReportNb - 0';
+        //prepare statement
+        $stmt = mysqli_prepare($this->conn, $query);
         mysqli_stmt_execute($stmt);
         $result = mysqli_stmt_get_result($stmt);
         mysqli_stmt_close($stmt);
@@ -121,15 +132,6 @@ class Post{
         mysqli_stmt_close($stmt);
         return $result;
     }
-    public function selectPostByNbReports(){
-        $query ='SELECT * FROM ' . $this->table . ' WHERE ReportNb > 0';
-        //prepare statement
-        $stmt = mysqli_prepare($this->conn, $query);
-        mysqli_stmt_execute($stmt);
-        $result = mysqli_stmt_get_result($stmt);
-        mysqli_stmt_close($stmt);
-        return $result;
-    }
     public function createPost(){
         //create querry
         $query = "INSERT INTO ". $this->table . " SET  DateOfCreation= ? , SavesNb = 0 ,ReactNb = 0 ,ReportNb = 0 , Tags = ? ,MediaContent = ? ,Field = ? ,TextContent = ? ,User_iduser = ? ";
@@ -148,9 +150,12 @@ class Post{
     }
     public function updatePost(){
         //create querry
-        $query = "Update ". $this->table . " SET  SavesNb = ? ,ReactNb = ? ,ReportNb = ? , Tags = ? ,MediaContent = ? ,Field = ? ,TextContent = ? 
+        $query = "Update ". $this->table . " SET  SavesNb = ? ,ReactNb = ? ,ReportNb = ? , Tags = ? ,Field = ? ,TextContent = ? 
         
             where idPost= ?";
+            //$query = "Update ". $this->table . " SET  SavesNb = ? ,ReactNb = ? ,ReportNb = ? , Tags = ? ,MediaContent = ? ,Field = ? ,TextContent = ? 
+        
+          //  where idPost= ?";
         //prepare statement
         $stmt = $this->conn->prepare($query);
         //clean data
@@ -159,12 +164,35 @@ class Post{
         $this->reactnb = htmlspecialchars(strip_tags($this->reactnb));
         $this->reportnb    =   htmlspecialchars(strip_tags($this->reportnb));
         $this->tags =   htmlspecialchars(strip_tags($this->tags));
-        $this->mediacontent = htmlspecialchars(strip_tags($this->mediacontent));
+        //$this->mediacontent = htmlspecialchars(strip_tags($this->mediacontent));
         $this->field    =   htmlspecialchars(strip_tags($this->field));
         $this->textcontent =   htmlspecialchars(strip_tags($this->textcontent));
-        $this->mediacontent=file_get_contents($this->mediacontent);
+        //$this->mediacontent=file_get_contents($this->mediacontent);
         //binding of parameters
-        $stmt->bind_param("iiissssi",$this->savesnb,$this->reactnb,$this->reportnb,$this->tags,$this->mediacontent,$this->field,$this->textcontent,$this->idpost);
+        $stmt->bind_param("iiisssi",$this->savesnb,$this->reactnb,$this->reportnb,$this->tags,$this->field,$this->textcontent,$this->idpost);
+        //execute the query
+        if($stmt->execute()){
+            return true;
+        }
+        //eror mesg
+        printf("Error %s. \n",$stmt->error);
+        return false;
+    }
+    public function updatePosttext(){
+        //create querry
+        $query = "Update ". $this->table . " SET TextContent = ? 
+        
+            where idPost= ?";
+            //$query = "Update ". $this->table . " SET  SavesNb = ? ,ReactNb = ? ,ReportNb = ? , Tags = ? ,MediaContent = ? ,Field = ? ,TextContent = ? 
+        
+          //  where idPost= ?";
+        //prepare statement
+        $stmt = $this->conn->prepare($query);
+        //clean data
+        $this->textcontent =   htmlspecialchars(strip_tags($this->textcontent));
+        //$this->mediacontent=file_get_contents($this->mediacontent);
+        //binding of parameters
+        $stmt->bind_param("si",$this->textcontent,$this->idpost);
         //execute the query
         if($stmt->execute()){
             return true;
@@ -190,20 +218,17 @@ class Post{
         return false;
     }
     public function deleteAllPost(){
-        //create querry
         $query = "DELETE FROM " . $this->table . " WHERE User_idUser= ?";
-        //prepare statement
         $stmt = $this->conn->prepare($query);
-        //clean data
+         //clean data
         $this->user_iduser = htmlspecialchars(strip_tags($this->user_iduser));
-        //binding of parameters
+//binding of parameters
         $stmt->bind_param("i", $this->user_iduser);
-        if($stmt->execute()){
-            return true;
-        }
-        //eror mesg
-        printf("Error %s. \n",$stmt->error);
-        return false;
+if($stmt->execute()){
+    return true;
+}
+//eror mesg
+printf("Error %s. \n",$stmt->error);
     }
 }
 ?>

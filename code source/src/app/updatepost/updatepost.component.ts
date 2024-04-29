@@ -1,24 +1,91 @@
-import { Component,Input } from '@angular/core';
+
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+import { switchMap } from 'rxjs/operators';
+import { Component,Input, OnInit } from '@angular/core';
 import { Post } from '../models/post';
+import { NgClass } from '@angular/common';
+import { SharedService } from '../shared.service';
+import { ControllerService } from '../../controller.service';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-updatepost',
   templateUrl: './updatepost.component.html',
   styleUrl: './updatepost.component.css'
 })
-export class UpdatepostComponent {
-  @Input() post:Post=
-  {
-    picture:"https://hackspirit.com/wp-content/uploads/2021/06/Copy-of-Rustic-Female-Teen-Magazine-Cover.jpg",
-    person_name:"Lina Belhadj",
-    person_status:"Computer science student",
-    post_date:" 25 Nov 2023 at 23:00",
-    status:"founder",
-    text_content:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    media_content:"https://media.istockphoto.com/id/1346944001/photo/close-up-of-co-workers-stacking-their-hands-together.jpg?s=612x612&w=0&k=20&c=lidJcFUSR3rkMt4B0yoNwH55lz3sth9o2280keqBXGE=",
-    idpost:-1
-  }
-   constructor(){
+export class UpdatepostComponent implements OnInit{
+   updateForm:FormGroup;
+   id:any;
+   id_post:any;
+   post1:any;
+   hell:any;
+   user: any;
+   constructor(private formBuilder: FormBuilder,private route:ActivatedRoute,private sharedService: SharedService,private controller : ControllerService,private apiService: ControllerService, private router: Router){
+    this.updateForm = this.formBuilder.group({
+      text_value: ['']
+    })
+    this.hell={id_post:0,
+      textcontent:"",
+      dateofcreation:"",
+      status:"",
+      mediacontent:""
+  
+     }
+   }
+
+   
+   async ngOnInit(){
+    
+    this.user = this.sharedService.getUser();
+    //console.log(this.user);
+    const id=this.route.snapshot.paramMap.get('id'); 
+    if (id!=null){ 
+     this.controller.getPostById(id).subscribe(
+      data=>{
+        this.post1=data;
+
+        console.log(data);
+        //console.log(this.post1.tags);
+        this.hell={
+          id_post:this.post1.idpost,
+          textcontent:this.post1.textcontent,
+          dateofcreation:this.post1.dateofcreation,
+          status:this.post1.tags,
+          mediacontent:"data:image/jpeg;base64,"+this.post1.mediacontent
+         }
+         console.log(this.post1.dateofcreation);
+         this.id_post=this.hell.id_post;
+      
+      },
+      err=>{
+        console.log(err);
+      }
+     )
+    
+}
 
    }
-}
+   savepost(){
+    const text_valuecontrol = this.updateForm.get('text_value');
+    if (text_valuecontrol && text_valuecontrol.value !== null) {
+      const text_val = text_valuecontrol.value;
+
+   this.apiService.
+   updatePost(this.id_post,text_val).subscribe((response: any) => {
+      // update avec success
+      console.log("success");
+      this.sharedService.setUser(response);
+      
+    
+  }, (error: any) => {
+    console.log ("error")
+    console.error(error);
+  });
+
+
+   }
+  }
+  }
+  
+

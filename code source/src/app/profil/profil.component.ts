@@ -22,11 +22,11 @@ export class ProfilComponent {
         
         if (post.mediacontent){
         this.tab.push(
-        new Post("data:image/jpeg;base64,"+this.user.ppic,this.user.pfirst_name+" "+this.user.plast_name,this.user.field,post.dateofcreation,post.tags,post.textcontent,post.idpost,"data:image/jpeg;base64,"+post.mediacontent),
+        new Post("data:image/jpeg;base64,"+this.user.ppic,this.user.pfirst_name+" "+this.user.plast_name,this.user.field,post.dateofcreation,post.tags,post.textcontent,post.idpost,post.User_idUser,"data:image/jpeg;base64,"+post.mediacontent),
         )
       }else{
         this.tab.push(
-          new Post("data:image/jpeg;base64,"+this.user.ppic,this.user.pfirst_name+" "+this.user.plast_name,this.user.field,post.dateofcreation,post.tags,post.textcontent,post.idpost),
+          new Post("data:image/jpeg;base64,"+this.user.ppic,this.user.pfirst_name+" "+this.user.plast_name,this.user.field,post.dateofcreation,post.tags,post.textcontent,post.idpost,post.User_idUser),
           )
       }
       }
@@ -35,11 +35,11 @@ export class ProfilComponent {
         
         if (post.mediacontent){
         this.tab.push(
-        new Post("data:image/jpeg;base64,"+this.user.ppic,this.user.sname,this.user.field,post.dateofcreation,post.tags,post.textcontent,post.idpost,"data:image/jpeg;base64,"+post.mediacontent),
+        new Post("data:image/jpeg;base64,"+this.user.ppic,this.user.sname,this.user.field,post.dateofcreation,post.tags,post.textcontent,post.idpost,post.User_idUser,"data:image/jpeg;base64,"+post.mediacontent),
         )
       }else{
         this.tab.push(
-          new Post("data:image/jpeg;base64,"+this.user.ppic,this.user.sname,this.user.field,post.dateofcreation,post.tags,post.textcontent,post.idpost),
+          new Post("data:image/jpeg;base64,"+this.user.ppic,this.user.sname,this.user.field,post.dateofcreation,post.tags,post.textcontent,post.idpost,post.User_idUser),
           )
       }
       }

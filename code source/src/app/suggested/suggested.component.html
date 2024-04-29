@@ -11,10 +11,10 @@
                     <li *ngFor="let profile of suggested" class="list-group-item cus-bg">
                       <div class="row">
                         <div class="col-3 align-items">
-                          <a routerLink="/OtherPorfile" routerLinkActive="active"><img [src]="profile.image" height="45" width="51" id="pdp" class="rounded-circle" ></a>
+                          <a (click)="consult(profile.id)"><img alt="profileImage" [src]="profile.image" height="45" width="51" id="pdp" class="rounded-circle" ></a>
                       </div>
                         <div class="col align-items">
-                          <a routerLink="/OtherPorfile" style="text-decoration: none; color: black;"><p  style="margin-top: 11px;" id="profile-name">{{profile.name}}</p></a>
+                          <a (click)="consult(profile.id)" style="text-decoration: none; color: black;"><p  style="margin-top: 11px;" id="profile-name">{{profile.name}}</p></a>
                       </div>
                       </div>
                     </li>

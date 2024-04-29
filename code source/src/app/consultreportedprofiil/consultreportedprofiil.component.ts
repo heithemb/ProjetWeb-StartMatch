@@ -28,11 +28,11 @@ export class ConsultreportedprofiilComponent {
       
       if (post.mediacontent){
       this.tab.push(
-      new Post("data:image/jpeg;base64,"+this.userv.ppic,this.userv.pfirst_name+" "+this.userv.plast_name,this.userv.field,post.dateofcreation,post.tags,post.textcontent,post.idpost,"data:image/jpeg;base64,"+post.mediacontent),
+      new Post("data:image/jpeg;base64,"+this.userv.ppic,this.userv.pfirst_name+" "+this.userv.plast_name,this.userv.field,post.dateofcreation,post.tags,post.textcontent,post.idpost,post.User_idUser,"data:image/jpeg;base64,"+post.mediacontent),
       )
     }else{
       this.tab.push(
-        new Post("data:image/jpeg;base64,"+this.userv.ppic,this.userv.pfirst_name+" "+this.userv.plast_name,this.userv.field,post.dateofcreation,post.tags,post.textcontent,post.idpost),
+        new Post("data:image/jpeg;base64,"+this.userv.ppic,this.userv.pfirst_name+" "+this.userv.plast_name,this.userv.field,post.dateofcreation,post.tags,post.textcontent,post.idpost,post.User_idUser),
         )
     }
     }
@@ -41,11 +41,11 @@ export class ConsultreportedprofiilComponent {
       
       if (post.mediacontent){
       this.tab.push(
-      new Post("data:image/jpeg;base64,"+this.userv.ppic,this.userv.sname,this.userv.field,post.dateofcreation,post.tags,post.textcontent,post.idpost,"data:image/jpeg;base64,"+post.mediacontent),
+      new Post("data:image/jpeg;base64,"+this.userv.ppic,this.userv.sname,this.userv.field,post.dateofcreation,post.tags,post.textcontent,post.idpost,post.User_idUser,"data:image/jpeg;base64,"+post.mediacontent),
       )
     }else{
       this.tab.push(
-        new Post("data:image/jpeg;base64,"+this.userv.ppic,this.userv.sname,this.userv.field,post.dateofcreation,post.tags,post.textcontent,post.idpost),
+        new Post("data:image/jpeg;base64,"+this.userv.ppic,this.userv.sname,this.userv.field,post.dateofcreation,post.tags,post.textcontent,post.idpost,post.User_idUser,),
         )
     }
     }
