@@ -16,6 +16,32 @@ export class ControllerService {
     
   }
 
+  signupS(email: string,
+    password: string,
+    phone: any,
+    name: string,
+    date: Date,
+    address: string,
+    field: string,
+    bio: string,){
+      const headers = new HttpHeaders({
+      'Content-Type': 'application/json'
+    });
+    const data = {
+      isperson:0,
+      email: email,
+      password: password,
+      bio:bio,
+      phone_num:phone,
+      field:field,
+      ppic:"",
+      cpic:"",
+      address:address,
+      sname:name,
+      sdateofcreation:date,
+    };
+    return this.http.post(`${this.url}/User/createUser.php`, data, { headers });
+  }
   login(email: string, password: string,uri:string) {
     const headers = new HttpHeaders({
       'Content-Type': 'application/json'
@@ -26,6 +52,7 @@ export class ControllerService {
     };
     return this.http.post(`${this.url}/${uri}`, data, { headers });
   }
+  
   signup(email: string,
     password: string,
     phone: any,
@@ -85,7 +112,9 @@ export class ControllerService {
       })
     );
   }
-  
+  deleteUser(id:any){
+    return this.http.get(`${this.url}/User/deleteUser.php?iduser=${id}`);
+  }
   getusers() {
     return this.http.get(`${this.url}/User/selectAllUser.php`);
   }
