@@ -5,7 +5,7 @@ import { Router } from '@angular/router';
 import { SharedService } from '../shared.service';
 @Component({
   selector: 'app-login',
-  templateUrl: './login-form.component.html',
+  templateUrl:'./login-form.component.html',
   styleUrls: ['./login-form.component.css']
 })
 export class LoginFormComponent {
