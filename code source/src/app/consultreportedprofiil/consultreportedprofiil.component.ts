@@ -22,7 +22,7 @@ export class ConsultreportedprofiilComponent {
     this.userv = this.sharedService.getUserv();
     this.posts = await this.controller.getPostsByIdUserInProfil(this.userv.idUser).toPromise();
     console.log(this.posts);
-    if(this.posts){
+    if(this.posts.data){
     if(this.userv.pfirst_name){
     for (let post of this.posts.data){
       

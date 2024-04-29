@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrl: './consultpost.component.css'
 })
 export class ConsultpostComponent {
-
+post:any
+constructor(){}
 }

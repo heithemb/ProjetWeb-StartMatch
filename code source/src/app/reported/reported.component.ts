@@ -59,6 +59,7 @@ export class ReportedComponent {
   deleteprofile(id:any){
     this.controller.delete("User/deleteUser.php?iduser="+id).subscribe(response => {
       console.log(response);
+      this.router.navigate(['/adminfirstpannel']);
     },(error: any) => {
       // If the response generates an error, the user is not found
       console.log('User delete failed:', error);

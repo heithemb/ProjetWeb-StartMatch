@@ -1,10 +1,11 @@
+
 <div class="container">
     <div class="card mb-3">
         <div class="card-body">
             <div class="flexy">
-                <img  routerLink='/OtherPorfile' class="img-fluid eclipse"  [src]="post.picture" alt="person/startup_img">
+                <img  (click)="consult(post.idUser)" class="img-fluid eclipse"  [src]="post.picture" alt="person/startup_img">
                 <div class="flexy-1">
-                    <span routerLink='/OtherPorfile' class="name">{{post.person_name}}</span>
+                    <span (click)="consult(post.idUser)" class="name">{{post.person_name}}</span>
                     <span class="person-description">{{post.person_status}}</span>
                     <span class="person-description">{{post.post_date}}</span>
                 </div> 

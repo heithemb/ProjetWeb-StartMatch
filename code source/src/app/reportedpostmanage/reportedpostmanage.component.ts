@@ -1,6 +1,8 @@
 import { Component,Input } from '@angular/core';
 import { Post } from '../models/post';
 import { ControllerService } from '../../controller.service';
+import { SharedService } from '../shared.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-reportedpostmanage',
@@ -21,15 +23,27 @@ export class ReportedpostmanageComponent {
     idpost:-1,
     idUser:-1
   }
-   constructor(private controller:ControllerService){
+   constructor(private controller:ControllerService,private sharedservice :SharedService,private router:Router){
 
    }
    deletepost(id: number) {
-    this.controller.delete("/Post/deletePost.php?idpost="+id).subscribe(response => {
+    this.controller.delete("Post/deletePost.php?idpost="+id).subscribe(response => {
       console.log(response);
     },(error: any) => {
       // If the response generates an error, the user is not found
-      console.log('postd elete failed:', error);
+      console.log('postd delete failed:', error);
     });
     }
+    consult(id: any) {
+      console.log(id);
+      this.controller.get('User/selectUserByIdUser.php?iduser='+id).subscribe((response: any) => {
+          // Login successful, share the response with the shared service
+          console.log(response);
+          this.sharedservice.setUserv(response);
+          this.router.navigate(['/consultreportedprofiil']);
+        
+      }, (error: any) => {
+        console.error(error);
+        
+      })}
 }

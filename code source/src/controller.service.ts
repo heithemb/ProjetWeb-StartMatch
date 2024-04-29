@@ -24,7 +24,12 @@ export class ControllerService {
       login: email,
       password: password
     };
-    return this.http.post(`${this.url}/${uri}`, data, { headers });
+    return this.http.post(`${this.url}/${uri}`, data, { headers }).pipe(
+      tap((response) => console.log(response)),
+      catchError((error) => {
+        console.error(error);
+        return throwError(error);
+      }));;
   }
   signup(email: string,
     password: string,
@@ -59,7 +64,12 @@ export class ControllerService {
       pexpertise:yearOfExperience,
       pgender:gender,
     };
-    return this.http.post(`${this.url}/User/createUser.php`, data, { headers });
+    return this.http.post(`${this.url}/User/createUser.php`, data, { headers }).pipe(
+      tap((response) => console.log(response)),
+      catchError((error) => {
+        console.error(error);
+        return throwError(error);
+      }));;
   }
   signupS(email: string,
     password: string,
@@ -85,7 +95,12 @@ export class ControllerService {
       sname:name,
       sdateofcreation:date,
     };
-    return this.http.post(`${this.url}/User/createUser.php`, data, { headers });
+    return this.http.post(`${this.url}/User/createUser.php`, data, { headers }).pipe(
+      tap((response) => console.log(response)),
+      catchError((error) => {
+        console.error(error);
+        return throwError(error);
+      }));;
   }
   updatePost(idpost:any
     ,textcontent:string){
@@ -96,17 +111,37 @@ export class ControllerService {
       const headers = new HttpHeaders({
         'Content-Type': 'application/json'
       });
-      return this.http.put(`${this.url}/Post/updatePosttext.php`,data_post,{headers});
+      return this.http.put(`${this.url}/Post/updatePosttext.php`,data_post,{headers}).pipe(
+        tap((response) => console.log(response)),
+        catchError((error) => {
+          console.error(error);
+          return throwError(error);
+        }));;
     }
   getreportedaccounts(){
-    return this.http.get(`${this.url}/Account/selectAccountByReportsNb.php?reportsnb=1`);
+    return this.http.get(`${this.url}/Account/selectAccountByReportsNb.php?reportsnb=1`).pipe(
+      tap((response) => console.log(response)),
+      catchError((error) => {
+        console.error(error);
+        return throwError(error);
+      }));;
   }
   getuserbyidaccount(id:any){
-    return this.http.get(`${this.url}/User/selectUserByIdAccount.php?idaccount=${id}`);
+    return this.http.get(`${this.url}/User/selectUserByIdAccount.php?idaccount=${id}`).pipe(
+      tap((response) => console.log(response)),
+      catchError((error) => {
+        console.error(error);
+        return throwError(error);
+      }));;
   
   }
   getPostsByIdUserInProfil(id:any){
-    return this.http.get(`${this.url}/Post/selectPostByUserIdUser.php?user_iduser=${id}`);
+    return this.http.get(`${this.url}/Post/selectPostByUserIdUser.php?user_iduser=${id}`).pipe(
+      tap((response) => console.log(response)),
+      catchError((error) => {
+        console.error(error);
+        return throwError(error);
+      }));
   }
   createPost(postData: any) {
     const headers = new HttpHeaders({
@@ -123,24 +158,60 @@ export class ControllerService {
     );
   }
   getPostById(idPost:string){
-    return this.http.get(`${this.url}/Post/selectPostByIdPost.php?idpost=${idPost}`);
+    return this.http.get(`${this.url}/Post/selectPostByIdPost.php?idpost=${idPost}`).pipe(
+      tap((response) => console.log(response)),
+      catchError((error) => {
+        console.error(error);
+        return throwError(error);
+      }))
+      ;
   }
   getusers() {
-    return this.http.get(`${this.url}/User/selectAllUser.php`);
+    return this.http.get(`${this.url}/User/selectAllUser.php`).pipe(
+      tap((response) => console.log(response)),
+      catchError((error) => {
+        console.error(error);
+        return throwError(error);
+      }));;
   }
   getPosts(){
-    return this.http.get(`${this.url}/Post/selectAllPosts.php`);
+    return this.http.get(`${this.url}/Post/selectAllPosts.php`).pipe(
+      tap((response) => console.log(response)),
+      catchError((error) => {
+        console.error(error);
+        return throwError(error);
+      }));;
   }
   get(uri: string){
-    return this.http.get(`${this.url}/${uri}`);
+    return this.http.get(`${this.url}/${uri}`).pipe(
+      tap((response) => console.log(response)),
+      catchError((error) => {
+        console.error(error);
+        return throwError(error);
+      }));;
   }
   post(uri: string,payload : Object){
-    return this.http.post(`${this.url}/${uri}`,payload);
+    return this.http.post(`${this.url}/${uri}`,payload).pipe(
+      tap((response) => console.log(response)),
+      catchError((error) => {
+        console.error(error);
+        return throwError(error);
+      }));;
   }
   patch(uri: string,payload : Object){
-    return this.http.patch(`${this.url}/${uri}`,payload);
+    return this.http.patch(`${this.url}/${uri}`,payload).pipe(
+      tap((response) => console.log(response)),
+      catchError((error) => {
+        console.error(error);
+        return throwError(error);
+      }));;
   }
   delete(uri: string){
-    return this.http.delete(`${this.url}/${uri}`,);
+    return this.http.delete(`${this.url}/${uri}`).pipe(
+      tap((response) => console.log(response)),
+      catchError((error) => {
+        console.error(error);
+        return throwError(error);
+      }));;
   }
 }

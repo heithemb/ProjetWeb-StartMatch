@@ -1,26 +1,35 @@
-import { Component,Input } from '@angular/core';
-import { Post } from '../models/post';
+
+import { Component, Input } from '@angular/core';
+import { ControllerService } from '../../controller.service';
+import { Router } from '@angular/router';
+import { Post } from '../models/post'; // Import du modèle Post
 
 @Component({
   selector: 'app-postmanage',
   templateUrl: './postmanage.component.html',
-  styleUrl: './postmanage.component.css'
+  styleUrls: ['./postmanage.component.css'] // Le styleUrl doit être styleUrls
 })
 export class PostmanageComponent {
-  @Input() post:Post=
-  {
-    picture:"https://hackspirit.com/wp-content/uploads/2021/06/Copy-of-Rustic-Female-Teen-Magazine-Cover.jpg",
-    person_name:"Lina Belhadj",
-    person_status:"Computer science student",
-    post_date:" 25 Nov 2023 at 23:00",
-    status:"founder",
-    text_content:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    media_content:"https://media.istockphoto.com/id/1346944001/photo/close-up-of-co-workers-stacking-their-hands-together.jpg?s=612x612&w=0&k=20&c=lidJcFUSR3rkMt4B0yoNwH55lz3sth9o2280keqBXGE=",
-    idpost:-1,
-    idUser:-1
+  @Input() post!: Post; // Renommage de postId en post et correction de la référence dans le template
+
+  constructor(private controller: ControllerService, private router: Router) {}
+
+  deletePost() {
+
+    // Appel de la méthode deletePost du service ControllerService
+    this.controller.delete(`Post/deletePost.php?idpost=${this.post.idpost}`).subscribe(
+      response => {
+        console.log(response);
+        // Rediriger vers une autre page après la suppression réussie
+        this.router.navigate(['/profile']);
+      },
+      error => {
+        console.error('Post deletion failed:', error);
+        // Rediriger vers une autre page en cas d'échec de la suppression
+        this.router.navigate(['/profile']);
+      }
+    );
   }
-   constructor(){
-
-   }
-
 }
+
+

@@ -13,5 +13,6 @@ export class HeadernewsComponent {
 
   ngOnInit() {
     this.user = this.sharedService.getUser();
+
   }
 }

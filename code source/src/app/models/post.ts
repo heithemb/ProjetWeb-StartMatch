@@ -8,8 +8,9 @@ post_date:string;
 status:string;
 text_content:string;
 idpost:number;
+idUser: number;
 media_content?:string;
-    idUser: number;
+    
 
     constructor(picture:string,person_name:string,person_status:string,
         post_date:string,
@@ -26,8 +27,8 @@ media_content?:string;
     this.post_date=post_date;
     this.status=status;
     this.text_content=text_content;
-    this.media_content=media_content;
     this.idpost=idpost;
     this.idUser=idUser;
+    this.media_content=media_content;
     }
 }
