@@ -60,7 +60,7 @@ class Admin{
         //eror mesg
         printf("Error %s. \n",$stmt->error);
         return false;
-    }
+    } 
     public function updateAdmin(){
         //create querry
         $query = "UPDATE ". $this->table . " SET Profil_Login = ?, Name = ? WHERE idAdmin= ?";
