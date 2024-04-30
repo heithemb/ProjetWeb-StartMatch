@@ -1,0 +1,28 @@
+{
+  "routes": [
+    "/about-us",
+    "/about-us2",
+    "/aboutus2",
+    "/adminfirstpannel",
+    "/consultpost",
+    "/contact-us",
+    "/contactus2",
+    "/footer",
+    "/form-person",
+    "/form-startup",
+    "/formperson",
+    "/formstartup",
+    "/landing",
+    "/landingpage",
+    "/login",
+    "/newsfeed",
+    "/OtherPorfile",
+    "/privacy",
+    "/profile",
+    "/Reported",
+    "/search",
+    "/signin",
+    "/updatepost",
+    "/updateprofile"
+  ]
+}
